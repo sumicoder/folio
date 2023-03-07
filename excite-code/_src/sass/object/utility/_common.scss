@@ -1,0 +1,30 @@
+@use "../../foundation" as *;
+
+// .u-flex-reverse {
+//     flex-direction: row-reverse;
+// }
+
+
+// .u-skew5 {
+//     transform: skewY(5deg);
+// }
+
+.u-pc-none {
+    display: flex;
+
+    @include mq(md) {
+        display: none;
+    }
+}
+.u-sp-none {
+    display: none;
+
+    @include mq(md) {
+        display: flex;
+    }
+}
+
+
+// .u-overflowX-scroll{
+//     overflow-x: scroll;
+// }

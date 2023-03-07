@@ -1,0 +1,19 @@
+@use "../foundation/" as *;
+
+/*============================
+#footer.l-footer
+============================*/
+.l-footer {
+    background-color: $c-footer;
+    padding: 20px;
+    text-align: center;
+
+    @include mq(md) {
+        padding: 30px;
+    }
+}
+
+.l-footer__copy {
+    color: $c-footer-text;
+    font-size: 14px;
+}

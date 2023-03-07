@@ -1,0 +1,99 @@
+@charset "UTF-8";
+@use "../../foundation" as *;
+
+// ================================================================
+// p-home-message
+// ================================================================
+.p-home-message {
+    position: relative;
+    padding-top: 80px;
+
+    @include mq(pc) {
+        margin-top: 120px;
+    }
+}
+.p-home-message__content-container {
+    display: grid;
+    gap: 80px 0;
+
+    @include mq(pc) {
+        gap: min(toVw(180), 180px) 0;
+    }
+}
+.p-home-message__bg-image {
+    position: sticky;
+    top: 120px;
+    left: 0;
+    width: 100%;
+    height: 130px;
+    background-image: url(../images/01_top/message-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include mq(pc) {
+        top: 133px;
+        height: 174px;
+    }
+}
+
+// ----------------------------------------
+// セクション
+// ----------------------------------------
+.p-home-message__section {
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+    padding-left: 61px;
+
+    @include mq(pc) {
+        padding-left: 0;
+        grid-template-columns: 1fr 50%;
+        gap: 0 min(toVw(60), 60px);
+    }
+}
+.p-home-message__section-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.p-home-message__section-title span {
+    @include txt(12px, 400, $c-main, left);
+    @include txt-option(1.5, 0px);
+    font-family: $poppins;
+    writing-mode: vertical-rl;
+
+    @include mq(pc) {
+        font-size: 12px;
+    }
+}
+.p-home-message__section-title span:nth-child(2) {
+    font-size: 14px;
+    margin-top: 4px;
+}
+.p-home-message__section-text-1 {
+    @include txt(min(6.1vw, 24px), 700, $c-main, left);
+    @include txt-option(1.447, 0px);
+    white-space: nowrap;
+
+    @include mq(pc) {
+        font-size: min(toVw(32), 32px);
+        @include txt-option(1.7, 0px);
+        padding-left: min(toVw(60), 60px);
+    }
+}
+.p-home-message__section-text-2 {
+    margin-top: 22px;
+
+    @include txt(16px, 500, $c-main, left);
+    @include txt-option(1.448, 0px);
+
+    @include mq(pc) {
+        margin-top: 0;
+        font-size: min(1.4vw, 16px);
+        @include txt-option(2.5, 0px);
+    }
+}

@@ -1,0 +1,24 @@
+@media (max-width:896px) {
+    .header {
+        padding: 35px 15px 20px 15px;
+        margin-bottom: 0;
+    }
+    .hnav{
+        margin-top: 25px;
+        overflow-x: scroll;
+    }
+
+    .main__wrap {
+        display: block;
+    }
+
+    .main__wrap--left {
+        width: 100%;
+    }
+
+    .main__wrap--right {
+        width: 100%;
+        padding: 10px 15px;
+    }
+
+}

@@ -1,0 +1,111 @@
+@charset "UTF-8";
+@use "../../foundation" as *;
+
+// ================================================================
+// p-home-service
+// ================================================================
+.p-home-service {
+    background-color: $c-main;
+    background-image: url(../images/01_top/service-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    @include mq(pc) {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+}
+.p-home-service__title-wrapper {
+    text-align: center;
+}
+
+// ----------------------------------------
+// アイテム
+// ----------------------------------------
+.p-home-service__items {
+    margin-top: 40px;
+
+    @include mq(pc) {
+        max-width: 480px;
+        margin: 80px auto 0 auto;
+    }
+}
+.p-home-service__item {
+    @include mq(pc) {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        gap: 0 min(toVw(100), 100px);
+    }
+}
+.p-home-service__item:not(:first-child) {
+    margin-top: 40px;
+
+    @include mq(pc) {
+        margin-top: 80px;
+    }
+}
+
+.p-home-service__number-area {
+    position: relative;
+    overflow: hidden;
+}
+.p-home-service__number-area::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 86px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(270deg, #1e365b 16.22%, #f8e8d5 84.13%);
+}
+.p-home-service__number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+
+    background-image: url(../images/01_top/service-number-circle.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.p-home-service__number span {
+    @include txt(14px, 500, $c-text, left);
+    @include txt-option(1.2, 0px);
+    font-family: $poppins;
+
+    @include mq(pc) {
+        font-size: 20px;
+    }
+}
+.p-home-service__text {
+    @include txt(16px, 500, $c-text-gray, left);
+    @include txt-option(1.5, 0px);
+    border-bottom: 1px solid #a5a5a5;
+    padding-bottom: 40px;
+    margin-top: 80px;
+
+    @include mq(pc) {
+        min-height: 112px;
+        font-size: 16px;
+    }
+}
+.p-home-service__image {
+    padding-top: 40px;
+}
+.p-home-service__image img {
+    aspect-ratio: 400 / 225;
+    object-fit: cover;
+}
+.p-home-service__button-wrapper {
+    text-align: center;
+    margin-top: 80px;
+}

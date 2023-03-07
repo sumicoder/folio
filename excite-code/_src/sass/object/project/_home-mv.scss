@@ -1,0 +1,29 @@
+@use "../../foundation" as *;
+
+/*============================
+// p-home-mv
+============================*/
+.p-home-mv {
+    margin-top: 75px;
+    background-image: url(../images/home-mv.jpg);
+    background-size: cover;
+    background-position: top 50% right 47%;
+    height: 100vh;
+    position: relative;
+}
+
+.p-home-mv__text {
+    font-size: 30px;
+    font-weight: 400;
+    color: $c-main;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    @include mq(md){
+        font-size:48px;
+    }
+}

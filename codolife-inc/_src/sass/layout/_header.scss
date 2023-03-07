@@ -1,0 +1,276 @@
+@use "../foundation" as *;
+
+//============================
+// l-header
+//============================
+.l-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+}
+.l-header__inner {
+    max-width: 100%;
+
+    @include mq(pc) {
+        max-width: 1440px;
+        padding-right: min(toVw(80), 80px);
+    }
+}
+.l-header__content-container {
+    position: relative;
+}
+.l-header__logo {
+    position: absolute;
+    top: 32px;
+    left: 0;
+    width: 151px;
+    z-index: 1000;
+    opacity: 0;
+
+    @include animation(
+        $name: fadeIn,
+        $delay: 7.5s,
+        $timing-function: cubic-bezier(0.19, 1, 0.22, 1)
+    );
+
+    transition: filter 0.5s ease-in-out;
+
+    &.is-inv {
+        filter: brightness(0) invert(1) !important;
+    }
+}
+.l-header__nav {
+    display: inline-block;
+    position: absolute;
+    top: 80px;
+    right: 0;
+}
+.l-header__nav-items {
+    padding-right: 23px;
+    opacity: 0;
+
+    @include animation(
+        $name: fadeIn,
+        $delay: 7.5s,
+        $timing-function: cubic-bezier(0.19, 1, 0.22, 1)
+    );
+}
+.l-header__nav-item {
+    margin-top: 12px;
+
+    &:first-of-type {
+        margin-top: 0;
+    }
+}
+.l-header__nav-link {
+    display: block;
+    overflow: hidden;
+    height: 24px;
+}
+@media (hover: hover) {
+    .l-header__nav-link:hover {
+        opacity: 1;
+    }
+    .l-header__nav-link:hover .l-header__nav-text {
+        transform: translateY(-50%);
+    }
+}
+.l-header__nav-text {
+    @include txt(16px, 400, $c-text, right);
+    @include txt-option(1.5, 0px);
+    display: block;
+    font-family: $poppins;
+    transition: transform 0.3s;
+}
+.l-header__dl-button {
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-top: 40px;
+    margin-right: -8px;
+    line-height: 100px;
+    text-align: center;
+    transform: scale(0);
+
+    @include animation(
+        $name: DLbutton,
+        $duration: 0.4s,
+        $delay: 7.5s,
+        $timing-function: cubic-bezier(0.19, 1, 0.22, 1)
+    );
+
+    @include mq(pc) {
+        margin-top: 37px;
+        margin-right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    & span {
+        @include txt(24px, 700, $c-text, center);
+        @include txt-option(1.5, 0px);
+        font-family: $poppins;
+
+        @include mq(pc) {
+            font-size: 24px;
+        }
+    }
+}
+.l-header__dl-circle {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: circle 20s infinite linear;
+}
+@keyframes circle {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+//============================
+// mobile Hamburger
+//============================
+.l-header__mobile-btn {
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    height: 100px;
+    width: 100px;
+    margin-right: -20px;
+    opacity: 0;
+
+    @include animation(
+        $name: fadeIn,
+        $delay: 7.5s,
+        $timing-function: cubic-bezier(0.19, 1, 0.22, 1)
+    );
+
+    transition: filter 0.5s ease-in-out;
+
+    &.is-inv {
+        filter: brightness(0) invert(1) !important;
+    }
+}
+.l-header__mobile-btn-bar {
+    position: absolute;
+    height: 2px;
+    background-color: $c-main;
+    border-radius: 1px;
+
+    transition: all 0.5s ease-in-out;
+
+    &.is-open {
+        width: 33px;
+        top: 50px;
+        right: 28px;
+        transform: rotate(-135deg);
+    }
+
+    &--1 {
+        width: 18px;
+        top: 38px;
+        right: 42px;
+    }
+    &--2 {
+        width: 6px;
+        top: 38px;
+        right: 30px;
+    }
+    &--3 {
+        width: 12px;
+        top: 50px;
+        right: 48px;
+    }
+    &--4 {
+        width: 12px;
+        top: 50px;
+        right: 30px;
+
+        &.is-open {
+            width: 17px;
+            top: 44px;
+            right: 29px;
+            transform: rotate(315deg);
+        }
+    }
+    &--5 {
+        width: 6px;
+        top: 62px;
+        right: 54px;
+
+        &.is-open {
+            width: 17px;
+            top: 44px;
+            right: 29px;
+            transform: rotate(315deg);
+        }
+    }
+    &--6 {
+        width: 18px;
+        top: 62px;
+        right: 30px;
+
+        &.is-open {
+            width: 13px;
+            transform: rotate(315deg);
+            top: 58px;
+            right: 45px;
+        }
+    }
+}
+.l-header-mobile__nav {
+    background-color: $c-main;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    z-index: 100;
+    transition: all 0.5s ease-in-out;
+
+    opacity: 0;
+    visibility: hidden;
+
+    &.is-show {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+.l-header-mobile__nav-items {
+    display: inline-block;
+    max-width: 100%;
+    margin: auto;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: right;
+    padding-right: 20px;
+
+    transition: filter 0.5s ease-in-out;
+
+    &.is-inv {
+        filter: brightness(0) invert(1) !important;
+    }
+}
+.l-header-mobile__nav-item {
+    font-size: 20px;
+    margin-top: 24px;
+
+    &:first-of-type {
+        margin-top: 0;
+    }
+}

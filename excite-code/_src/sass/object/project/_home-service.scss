@@ -1,0 +1,70 @@
+@use "../../foundation" as *;
+@use "home-common" as *;
+
+/*============================
+// p-home-service
+============================*/
+.p-home-service{
+    background-color: $c-main;
+}
+
+.p-home-service__inner {
+    max-width: $content-width;
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px 15px;
+
+    @include mq(md) {
+        padding: 100px 25px;
+    }
+}
+
+.p-home-service__title {
+    @include mq(md) {
+        text-align: center;
+    }
+}
+
+.p-home-service__title--heading {
+    @extend %p-home-section-title;
+}
+
+.p-home-service__title--bar {
+    @extend %p-home-section-title-bar;
+}
+
+.p-home-service__cards {
+    padding: 0 13px;
+    text-align: center;
+    @include mq(md) {
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 35px;
+    }
+}
+
+.p-home-service__card {
+    margin-bottom: 47px;
+
+    @include mq(md) {
+        margin-bottom: 0;
+    }
+}
+
+.p-home-service__card:last-child {
+    margin-bottom: 0;
+}
+
+.p-home-service__img {
+    width: 100%;
+    aspect-ratio: 320 / 240;
+}
+
+.p-home-service__caption {
+    margin-top: 16px;
+
+    @include mq(md) {
+        margin-top: 22px;
+    }
+}

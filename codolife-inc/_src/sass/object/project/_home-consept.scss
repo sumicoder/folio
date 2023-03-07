@@ -1,0 +1,100 @@
+@charset "UTF-8";
+@use "../../foundation" as *;
+
+// ================================================================
+// p-home-concept
+// ================================================================
+.p-home-concept {
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    @include mq(pc) {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+}
+.p-home-concept__media {
+    display: flex;
+    flex-direction: column;
+
+    @include mq(pc) {
+        display: grid;
+        grid-template-columns: 1fr 50%;
+        align-items: center;
+        gap: 0 40px;
+    }
+}
+
+// ----------------------------------------
+// テキスト
+// ----------------------------------------
+.p-home-concept__content {
+    display: contents;
+
+    @include mq(pc) {
+        display: block;
+    }
+}
+.p-home-concept__title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include mq(mobile) {
+        order: -2;
+    }
+}
+.p-home-concept__title span:nth-child(1) {
+    @include txt(14px, 400, $c-main, left);
+    @include txt-option(1.7, 0px);
+    font-family: $poppins;
+
+    @include mq(pc) {
+        @include txt-option(1.5, 0px);
+    }
+}
+.p-home-concept__title span:nth-child(2) {
+    display: inline-block;
+    @include txt(32px, 700, $c-main, left);
+    @include txt-option(1.5, 0px);
+    font-family: $poppins;
+
+    @include mq(pc) {
+        font-size: min(toVw(32), 32px);
+    }
+}
+.p-home-concept__text {
+    @include txt(16px, 500, $c-main, left);
+    @include txt-option(1.5, 0px);
+    margin-top: 24px;
+
+    @include mq(pc) {
+        font-size: min(1.4vw, 16px);
+        margin-top: min(toVw(40), 40px);
+    }
+}
+.p-home-concept__button-wrapper {
+    text-align: center;
+    margin-top: 40px;
+
+    @include mq(pc) {
+        margin-top: min(toVw(80), 80px);
+    }
+}
+
+// ----------------------------------------
+// 画像
+// ----------------------------------------
+.p-home-concept__image {
+    order: -1;
+    margin-top: 24px;
+
+    @include mq(pc) {
+        order: 0;
+    }
+}
+.p-home-concept__image img {
+    aspect-ratio: 540 /304;
+    object-fit: cover;
+}

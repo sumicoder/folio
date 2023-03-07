@@ -1,0 +1,214 @@
+@charset "UTF-8";
+@use "../../foundation" as *;
+
+// ================================================================
+// p-home-about
+// ================================================================
+.p-home-about {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @include mq(pc) {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+}
+
+.p-home-about__content-container {
+    margin-top: 40px;
+
+    @include mq(pc) {
+        display: grid;
+        grid-template-columns: min(toVw(380), 380px) 1fr;
+        gap: 0 min(toVw(96), 96px);
+        margin-top: 80px;
+    }
+}
+
+// ----------------------------------------
+// 理念
+// ----------------------------------------
+.p-home-about__philosophy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1 / 1;
+
+    background-image: url(../images/01_top/about-header-circle.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include mq(pc) {
+        position: sticky;
+        top: 100px;
+    }
+}
+.p-home-about__philosophy-text-wrapper {
+    width: 212px;
+
+    @include mq(pc) {
+        width: min(toVw(240), 240px);
+    }
+}
+.p-home-about__philosophy-title {
+    @include txt(32px, 700, $c-text, center);
+    @include txt-option(1.5, 0px);
+    font-family: $poppins;
+
+    @include mq(pc) {
+        font-size: min(toVw(40), 40px);
+    }
+}
+.p-home-about__philosophy-text {
+    @include txt(16px, 400, $c-text, left);
+    @include txt-option(1.5, 0px);
+    margin-top: 24px;
+
+    @include mq(pc) {
+        font-size: min(toVw(16), 16px);
+        margin-top: min(toVw(24), 24px);
+    }
+}
+
+// ----------------------------------------
+// パフォーマンス
+// ----------------------------------------
+.p-home-about__performance {
+    margin-top: 40px;
+
+    @include mq(pc) {
+        margin-top: min(toVw(40), 40px);
+    }
+}
+.p-home-about__performance-item:nth-child(2n) {
+    text-align: right;
+}
+.p-home-about__performance-item + .p-home-about__performance-item {
+    margin-top: 24px;
+
+    @include mq(pc) {
+        margin-top: max(toVw(-98), -98px);
+    }
+}
+.p-home-about__performance-circle {
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    aspect-ratio: 1 / 1;
+    text-align: center;
+
+    @include mq(pc) {
+        width: min(toVw(300), 300px);
+    }
+}
+.p-home-about__performance-circle:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        226.6deg,
+        rgba(30, 54, 91, 0.7) 16.22%,
+        rgba(248, 232, 213, 0.7) 84.13%
+    );
+    filter: blur(15px);
+    border-radius: 50%;
+}
+.p-home-about__performance-title {
+    @include txt(14px, 700, $c-main, center);
+    @include txt-option(1.1428, 0px);
+    margin-top: 57px;
+
+    @include mq(pc) {
+        font-size: min(toVw(16), 16px);
+        @include txt-option(1.5, 0px);
+        margin-top: min(toVw(86), 86px);
+    }
+}
+.p-home-about__performance-value {
+    display: inline-block;
+    width: 94px;
+    @include txt(48px, 700, $c-main, right);
+    @include txt-option(1.395, 0px);
+    font-family: $poppins;
+    margin-top: 4px;
+
+    @include mq(pc) {
+        width: min(toVw(147), 147px);
+        font-size: min(toVw(80), 80px);
+        @include txt-option(1.2, 0px);
+        margin-top: min(toVw(4), 4px);
+    }
+}
+.p-home-about__performance-value--point {
+    width: 107px;
+
+    @include mq(pc) {
+        width: min(toVw(168), 168px);
+    }
+}
+
+.p-home-about__performance-unit {
+    display: inline-block;
+    vertical-align: bottom;
+
+    @include txt(14px, 700, $c-main, right);
+    @include txt-option(1.42857, 0px);
+
+    @include mq(pc) {
+        font-size: min(toVw(16), 16px);
+        @include txt-option(1.5, 0px);
+    }
+}
+
+// ----------------------------------------
+// 情報
+// ----------------------------------------
+.p-home-about__info {
+    margin-top: 40px;
+
+    @include mq(pc) {
+        margin-top: min(toVw(98), 98px);
+    }
+}
+.p-home-about__info-items {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 0 36px;
+
+    @include mq(pc) {
+        grid-template-columns: min(toVw(170), 170px) 1fr;
+        gap: 0 min(toVw(40), 40px);
+    }
+}
+.p-home-about__info-title,
+.p-home-about__info-data {
+    @include txt(min(4vw, 16px), 400, $c-main, left);
+    @include txt-option(1.4375, 0px);
+    border-bottom: 1px solid #a5a5a5;
+    padding: 16px 0;
+
+    @include mq(pc) {
+        font-size: min(1.7vw, 16px);
+        @include txt-option(1.5, 0px);
+        padding: min(toVw(32), 32px) 0;
+    }
+}
+.p-home-about__info-title:first-of-type,
+.p-home-about__info-data:first-of-type {
+    border-top: 1px solid #a5a5a5;
+}
+.p-home-about__info-title {
+    font-weight: 500;
+}
+.p-home-about__info-data span {
+    display: block;
+}
+.p-home-about__info-data span + span {
+    margin-top: 8px;
+}

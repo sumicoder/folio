@@ -1,0 +1,40 @@
+// 優先度1:接頭辞-セマンティックな命名
+$c-base: #f4f2f1;
+$c-main: #1e365b;
+$c-text: #1e365b;
+$c-text-gray: #f2f2f2;
+$c-gradation: linear-gradient(226.6deg, #1e365b 16.22%, #f8e8d5 84.13%);
+
+$c-accent: #14645b;
+$c-btn: #06005c;
+$c-primary: #fff;
+$c-secondary: #000;
+
+// 優先度2:接頭辞-セマンティックな命名-明るさ
+$c-accent-lightest: #000;
+$c-accent-lighter: #000;
+$c-accent-light: #333;
+$c-accent-dark: #000;
+$c-accent-darker: #000;
+$c-accent-darkest: #000;
+
+// 優先度3:接頭辞-セマンティックな命名-明るさ連番（できるだけ使わない）
+$c-accent-lighter02: #000;
+$c-accent-lighter03: #000;
+
+// 優先度4:接頭辞-色の名前
+$c-white: #fff;
+$c-black: #202020;
+$c-red: #ff0000;
+
+// 優先度5:接頭辞-色の名前-明るさ
+$c-gray-lightest: #000;
+$c-gray-lighter: #000;
+$c-gray-light: #000;
+$c-gray-dark: #000;
+$c-gray-darker: #000;
+$c-gray-darkest: #000;
+
+// 優先度6:接頭辞-色の名前-明るさ連番（できるだけ使わない）
+$c-gray-lighter02: #000;
+$c-gray-lighter03: #000;

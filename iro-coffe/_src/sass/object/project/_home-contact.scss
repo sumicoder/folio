@@ -1,0 +1,51 @@
+@charset "UTF-8";
+@use "../../foundation" as *;
+
+//============================
+// home-contact
+//============================
+.p-home-contact {
+    width: 100%;
+    margin-top: rem(80);
+    padding-block: rem(40);
+    text-align: center;
+    background-image: url(../images/contact-bgSP.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+
+    @include mq(pc) {
+        margin-top: rem(120);
+        padding-block: rem(80);
+    background-image: url(../images/contact-bg.jpg);
+    }
+}
+.p-home-contact::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba($color: $c-black, $alpha: 0.6);
+}
+.p-home-contact__inner{
+    position: relative;
+    z-index: 1;
+}
+.p-home-contact__heading {
+}
+.p-home-contact__text {
+    margin-top: rem(24);
+
+    @include txt(rem(16), $regular, $c-white, center);
+}
+.p-home-contact__btn-area {
+    margin-top: rem(24);
+
+    @include mq(pc) {
+        margin-top: rem(80);
+    }
+}

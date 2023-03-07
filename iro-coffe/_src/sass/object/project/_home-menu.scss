@@ -1,0 +1,84 @@
+@charset "UTF-8";
+@use "../../foundation" as *;
+
+//============================
+// home-menu
+//============================
+.p-home-menu {
+}
+.p-home-menu__inner {
+    padding-inline: rem(45);
+
+    @include mq(pc) {
+        padding-inline: rem(25);
+    }
+}
+.p-home-menu__heading {
+    margin-top: rem(80);
+    text-align: center;
+
+    @include mq(pc) {
+        margin-top: rem(120);
+    }
+}
+.p-home-menu__cards {
+    margin-top: rem(48);
+
+    @include mq(pc) {
+        margin-top: rem(40);
+        display: flex;
+        justify-content: space-between;
+        gap: rem(60);
+    }
+}
+.p-home-menu__card:not(:first-of-type) {
+    margin-top: rem(36);
+
+    @include mq(pc) {
+        margin-top: 0;
+    }
+}
+.p-home-menu__card-image {
+    aspect-ratio: 300/300;
+    width: 100%;
+    object-fit: cover;
+
+    @include mq(pc) {
+        aspect-ratio: 320/320;
+    }
+}
+.p-home-menu__card-body {
+}
+.p-home-menu__card-title {
+    margin-top: rem(24);
+    font-family: $montserrat;
+    text-transform: capitalize;
+
+    @include txt(rem(20), $bold, $c-black, center);
+    @include txt-option(calc(24 / 20), 0px);
+
+    @include mq(pc) {
+        font-size: rem(24);
+        line-height: calc(24 / 24);
+    }
+}
+.p-home-menu__card-text {
+    margin-top: rem(16);
+
+    @include txt(rem(16), $regular, $c-black, center);
+    @include txt-option(calc(24 / 16), 0px);
+
+    @include mq(pc) {
+        margin-top: rem(24);
+        text-align-last: left;
+        line-height: calc(22 / 16);
+    }
+}
+.p-home-menu__btn-area {
+    margin-top: rem(40);
+    text-align: center;
+
+    @include mq(pc) {
+        margin-top: rem(80);
+    }
+}

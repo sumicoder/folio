@@ -1,0 +1,176 @@
+@use "../../foundation" as *;
+
+/*============================
+// section p-home-fv
+============================*/
+.p-home-fv {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+
+    @include mq(pc) {
+        display: block;
+        min-height: 768px;
+    }
+}
+.p-home-fv::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/01_top/fv-world-map.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include mq(pc) {
+        height: auto;
+        aspect-ratio: 1440 / 888;
+    }
+}
+.p-home-fv__copy {
+    padding: 80px 0;
+    width: 100%;
+    @include mq(pc) {
+        padding: 160px 0 0;
+    }
+}
+.p-home-fv__inner {
+    max-width: 100%;
+
+    @include mq(pc) {
+        max-width: 1440px;
+    }
+}
+.p-home-fv__copy-main-1 {
+    display: inline-block;
+    @include txt(80px, 700, $c-main, left);
+    @include txt-option(1, 0em);
+    font-family: $poppins;
+
+    opacity: 0;
+    transform: translateY(10px);
+    @include animation(
+        $name: main,
+        $delay: 2.5s,
+        $timing-function: cubic-bezier(0.19, 1, 0.22, 1)
+    );
+
+    @include mq(pc) {
+        font-size: min(toVw(160), 160px);
+    }
+}
+
+.p-home-fv__copy-main-2 {
+    overflow-y: hidden;
+}
+.p-hpme-fv__copy-databeats {
+    font-size: 36px;
+    font-weight: 700;
+    font-family: $poppins;
+    color: transparent;
+
+    @include mq(pc) {
+        font-size: min(toVw(90), 90px);
+    }
+
+    @for $i from 1 through 9 {
+        & .char:nth-child(#{$i}) {
+            height: 75%;
+            background-image: url(../images/01_top/databeats-bg.jpg);
+            background-repeat: no-repeat;
+            background-position: $i * 11% 50%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            display: inline-block;
+            transform: translateY(110%);
+
+            @include animation(
+                $name: databeats,
+                $duration: 1s,
+                $delay: 4 + $i * 0.03s,
+                $timing-function: cubic-bezier(0.19, 1, 0.22, 1)
+            );
+        }
+    }
+}
+.p-home-fv__copy-emotions {
+    display: inline-block;
+    width: 108px;
+    margin-left: 8px;
+    vertical-align: bottom;
+
+    @include mq(pc) {
+        width: min(toVw(285), 285px);
+        margin-left: min(toVw(24),24px);
+    }
+}
+.p-home-fv__copy-emotion--mask{
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 10;
+}
+.p-home-fv__copy-sub {
+    background-image: url(../images/01_top/fv-lead-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 19px 0;
+    transform: scale(0);
+    position: relative;
+    z-index: -1;
+
+    @include animation(
+        $name: line,
+        $duration: 2s,
+        $delay: 0.5s,
+        $timing-function: cubic-bezier(0.19, 1, 0.22, 1)
+    );
+
+    @include mq(pc) {
+        margin-top: -12px;
+    }
+}
+.p-home-fv__copy-sub-text {
+    opacity: 0;
+
+    @include txt(20px, 700, $c-white, left);
+    @include txt-option(1.8, 0px);
+
+    @include animation(
+        $name: fadeUp,
+        $delay: 6.5s,
+        $timing-function: cubic-bezier(0.19, 1, 0.22, 1)
+    );
+
+    @include mq(pc) {
+        font-size: min(toVw(32), 32px);
+        @include txt-option(1.5, 0px);
+    }
+}
+
+// ----------------------------------------
+// スクロールダウン
+// ----------------------------------------
+.p-home-fv__scroll-down {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 140px;
+    padding: 0 5px;
+    opacity: 0;
+
+    @include animation(
+        $name: fadeIn,
+        $delay: 6s,
+        $timing-function: cubic-bezier(0.19, 1, 0.22, 1)
+    );
+}

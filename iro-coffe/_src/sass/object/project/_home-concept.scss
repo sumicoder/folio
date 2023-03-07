@@ -1,0 +1,62 @@
+@charset "UTF-8";
+@use "../../foundation" as *;
+
+//============================
+// home-concept
+//============================
+.p-home-concept {
+}
+.p-home-concept__heading {
+    margin-top: rem(80);
+    text-align: center;
+
+    @include mq(pc) {
+        margin-top: rem(120);
+    }
+}
+.c-section-heading {
+}
+.p-home-concept__container {
+    margin-top: rem(40);
+
+    @include mq(pc) {
+        margin-top: rem(80);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+}
+.p-home-concept__image {
+    aspect-ratio: 358/251;
+    width: 100%;
+    object-fit: cover;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    @include mq(pc) {
+        max-width: rem(540);
+        aspect-ratio: 540/362;
+    }
+}
+.p-home-concept__content {
+    @include mq(pc) {
+        padding-inline: rem(70);
+    }
+}
+.p-hpme-concept__content-title {
+    margin-top: rem(24);
+
+    @include txt(rem(20), $bold, $c-main, center);
+    @include txt-option(calc(24 / 20), 0px);
+
+    @include mq(pc) {
+        margin-top: 0;
+        font-size: rem(20);
+        text-align: left;
+        line-height: calc(32 / 20);
+    }
+}
+.p-home-concept__content-text {
+    margin-top: rem(24);
+    @include txt(rem(16), $regular, $c-black, left);
+    @include txt-option(calc(24 / 16), 0px);
+}

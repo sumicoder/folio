@@ -1,0 +1,228 @@
+@charset "UTF-8";
+@use "../foundation" as *;
+
+// ================================================================
+// l-footer
+// ================================================================
+.l-footer {
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @include mq(pc) {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+}
+.l-footer__bg-image {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/00_common/footer-bg.png);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+// ----------------------------------------
+// コンタクト
+// ----------------------------------------
+.l-footer__contact-title {
+    @include txt(53px, 700, $c-white, center);
+    @include txt-option(1.5, 0px);
+    font-family: $poppins;
+
+    @include mq(pc) {
+        font-size: 80px;
+    }
+}
+.l-footer__contact-button-wrapper {
+    text-align: center;
+    margin-top: 24px;
+
+    @include mq(pc) {
+        margin-top: 40px;
+    }
+}
+
+.l-footer__content-container {
+    margin-top: 80px;
+
+    @include mq(pc) {
+        display: grid;
+        grid-template-columns: 1fr 50%;
+        gap: 0 min(toVw(57), 57px);
+        margin-top: min(toVw(120), 120px);
+    }
+}
+
+// ----------------------------------------
+// コンテンツ
+// ----------------------------------------
+.l-footer__company-name {
+    @include txt(24px, 700, $c-text-gray, left);
+    @include txt-option(1, 0px);
+
+    @include mq(pc) {
+        font-size: min(toVw(24), 24px);
+    }
+}
+.l-footer__company-tel {
+    @include txt(16px, 400, #f2f2f2, left);
+    @include txt-option(1.5, 0px);
+    font-family: $poppins;
+    margin-top: -4px;
+
+    @include mq(pc) {
+        font-size: min(toVw(16), 16px);
+        pointer-events: none;
+    }
+}
+
+// ----------------------------------------
+// 会社情報
+// ----------------------------------------
+.l-footer__company-info {
+    display: grid;
+    grid-template-columns: 248px 77px;
+    justify-content: space-between;
+    gap: 0;
+    margin-top: 40px;
+
+    @include mq(pc) {
+        grid-template-columns: min(toVw(248), 248px) 1fr;
+        gap: 0 min(toVw(40), 40px);
+        padding-left: min(toVw(61), 61px);
+        margin-top: min(toVw(40), 40px);
+    }
+}
+
+// ----------------------------------------
+// 住所
+// ----------------------------------------
+.l-footer__address {
+    padding-left: 32px;
+
+    @include mq(pc) {
+        padding-left: min(toVw(33), 33px);
+    }
+}
+.l-footer__address-title,
+.l-footer__address-data {
+    @include txt(14px, 400, #f2f2f2, left);
+    @include txt-option(1.7, 0px);
+
+    @include mq(pc) {
+        font-size: min(toVw(14), 14px);
+    }
+}
+.l-footer__address-title {
+    position: relative;
+    text-transform: uppercase;
+}
+.l-footer__address-title::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: -32px;
+    width: 24px;
+    height: 24px;
+
+    background-image: url(../images/00_common/icon-map-pin.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include mq(pc) {
+        left: max(toVw(-32), -32px);
+        width: min(toVw(24), 24px);
+        height: min(toVw(24), 24px);
+    }
+}
+.l-footer__address-title:not(:first-of-type) {
+    margin-top: 8px;
+
+    @include mq(pc) {
+        margin-top: min(toVw(8), 8px);
+    }
+}
+.l-footer__address-data {
+    color: #bababa;
+}
+
+// ----------------------------------------
+// SNS
+// ----------------------------------------
+.l-footer__sns {
+    display: flex;
+    flex-direction: column;
+}
+.l-footer__sns-title {
+    @include txt(12px, 400, #e3e3e3, left);
+    @include txt-option(1.33, 0px);
+    font-family: $poppins;
+
+    @include mq(pc) {
+        font-size: min(toVw(12), 12px);
+    }
+}
+.l-footer__sns-items {
+    margin-top: 16px;
+
+    @include mq(pc) {
+        margin-top: min(toVw(8), 8px);
+    }
+}
+.l-footer__sns-item:not(:first-child) {
+    margin-top: 16px;
+}
+.l-footer__sns-item a {
+    display: block;
+    @include txt(14px, 400, #f2f2f2, left);
+    @include txt-option(1.333, 0px);
+    white-space: nowrap;
+
+    @include mq(pc) {
+        font-size: min(toVw(14), 14px);
+        @include txt-option(1.712, 0px);
+    }
+}
+
+// ----------------------------------------
+// 画像
+// ----------------------------------------
+.l-footer__image {
+    display: none;
+
+    @include mq(pc) {
+        display: block;
+        filter: blur(15px);
+    }
+}
+.l-footer__image img {
+    height: 100%;
+    aspect-ratio: 540 / 308;
+    object-fit: cover;
+}
+
+// ----------------------------------------
+// copyright
+// ----------------------------------------
+.l-footer__copyright {
+    @include txt(14px, 400, #f2f2f2, left);
+    @include txt-option(1.712, 0px);
+    white-space: nowrap;
+    margin-top: auto;
+
+    @include mq(pc) {
+        font-size: min(toVw(14), 14px);
+    }
+}
+.l-footer__copyright.utils-block-hidden-pc {
+    text-align: center;
+    margin-top: 40px;
+}

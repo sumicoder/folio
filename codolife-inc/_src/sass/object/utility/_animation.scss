@@ -1,0 +1,13 @@
+.u-fade-in-nonactive {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.u-fade-in-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.js-fade-in{
+    transition: all .5s;
+}

@@ -1,0 +1,16 @@
+@use './variable' as *;
+
+// pxをremに変換
+@function rem($px, $basepx: 16px) {
+    @return $px / $basepx * 1rem;
+}
+
+// ----------------------------------------------------------------
+// pxをvwに変換する
+// @param $px ピクセル値
+// @param $design-width デザイン幅（アートボード幅）
+// @return pxをvwに変換した値
+// ----------------------------------------------------------------
+@function toVw($px, $design-width: 1440) {
+    @return calc(100 / $design-width) * $px * 1vw;
+}

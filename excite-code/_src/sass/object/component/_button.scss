@@ -1,0 +1,23 @@
+@use "../../foundation" as *;
+
+.c-btn {
+    display: inline-block;
+    text-align: center;
+    color: $c-btn-text;
+    background-color: $c-btn;
+    border-radius: 4px;
+}
+
+@media (hover: hover) {
+    .c-btn:hover {
+        background-color: #4d6452;
+    }
+}
+.c-btn01 {
+    @extend .c-btn;
+    padding: 15px 34px;
+}
+.c-btn02 {
+    @extend .c-btn;
+    padding: 16px 54px;
+}

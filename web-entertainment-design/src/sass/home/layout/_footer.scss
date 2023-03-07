@@ -1,0 +1,38 @@
+@use "../foundation" as *;
+@use "../global" as *;
+
+.l-footer {
+    padding-bottom: 20px;
+
+    &__inner {
+        @extend .content-width;
+
+        padding: 0 15px;
+        text-align: left;
+    }
+    &__logo {
+        width: 80px;
+        margin: 8px 0;
+        
+        @include mq(lg) {
+            width: 100px;
+        }
+    }
+    &__content {
+        @extend .flex;
+
+        padding: 40px 0;
+
+        @include mq(lg){
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+    &__texts {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    &__copy {
+        font-size: 10px;
+    }
+}

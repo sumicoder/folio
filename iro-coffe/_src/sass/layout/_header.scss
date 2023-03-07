@@ -1,0 +1,57 @@
+@charset "UTF-8";
+@use "../foundation" as *;
+
+//============================
+// l-header
+//============================
+.l-header {
+    padding-block: rem(40) rem(32);
+    background-color: $c-main;
+    color: $c-white;
+
+    @include mq(pc) {
+        padding-block: 0;
+        height: rem(90);
+    }
+}
+.l-header__inner {
+    @include mq(pc) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: inherit;
+    }
+}
+.l-header__logo {
+    width: rem(207);
+    margin-inline: auto;
+
+    @include mq(pc) {
+        width: rem(237);
+        margin-inline: 0;
+    }
+}
+.l-header__logo-link {
+}
+.l-header__logo-img {
+}
+.l-header__nav {
+}
+.l-header__nav-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: rem(40);
+    font-family: $montserrat;
+
+    @include txt(rem(16), $medium, $c-white, left);
+    @include txt-option(calc(16 / 16), 0px);
+}
+.l-header__nav-item {
+}
+.l-header__nav-link {
+    font-size: rem(16);
+    line-height: calc(24 / 16);
+    display: block;
+    text-transform: capitalize;
+}

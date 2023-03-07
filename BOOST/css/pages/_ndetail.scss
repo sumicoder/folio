@@ -1,0 +1,80 @@
+@use "../child/child" as *;
+
+.l-ndetail {
+    &-mainVis {
+        height: 525px;
+        background-image: url(../img/newsVis.jpg);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        &__text {
+            position: absolute;
+            top: 50%;
+            left: 160px;
+            transform: translateY(-50%);
+            color: $MainCol;
+            &--title {
+                font-size: 6.4rem;
+                line-height: 82px;
+                vertical-align: bottom;
+                font-weight: 900;
+                letter-spacing: 2px;
+            }
+            &--sub {
+                font-size: 2.4rem;
+                &-span {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+    &-bread {
+        font-size: 1.6rem;
+        font-weight: 900;
+        margin: 75px 85px;
+        &__list {
+            display: flex;
+            &--item {
+                margin-right: 5px;
+                text-shadow: 0 4px 3px rgba($color: $MainCol, $alpha: 0.25);
+                &::after {
+                    content: "-";
+                }
+                &:last-child::after {
+                    content: "";
+                }
+            }
+            &--black {
+                color: $MainCol;
+            }
+        }
+    }
+
+    &__item {
+        margin-bottom: 170px;
+        &--time {
+            font-size: 2rem;
+            font-weight: bold;
+            &::after {
+                content: "TOPICS";
+                margin-left: 20px;
+            }
+        }
+        &--title {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        &--img {
+            display: block;
+            margin: 118px auto 70px auto;
+        }
+        &--text {
+            font-size: 1.6rem;
+            line-height: 2;
+        }
+    }
+
+    &__btn {
+        text-align: center;
+    }
+}

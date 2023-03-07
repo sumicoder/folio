@@ -1,0 +1,65 @@
+@use "../../foundation" as *;
+@use "home-common" as *;
+
+/*============================
+// p-home-news
+============================*/
+.p-home-news__inner {
+    max-width: $content-width;
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px 15px;
+
+    @include mq(md) {
+        padding: 100px 25px;
+    }
+}
+
+.p-home-news__title--heading {
+    @extend %p-home-section-title;
+}
+
+.p-home-news__title--bar {
+    @extend %p-home-section-title-bar;
+}
+
+.p-home-news__list {
+    @include mq(md) {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.p-home-news__date {
+    margin-bottom: 14px;
+    padding-top: 31px;
+
+    @include mq(md) {
+        width: 115px;
+        margin-bottom: 0;
+        padding-top: 32px;
+        padding-bottom: 29px;
+        border-bottom: 1px solid $c-main;
+    }
+}
+.p-home-news__date:nth-of-type(1) {
+    padding-top: 0;
+}
+
+.p-home-news__item {
+    font-size: 15px;
+    border-bottom: 1px solid $c-main;
+    padding-bottom: 21px;
+
+    @include mq(md) {
+        width: calc(100% - 115px);
+        margin-bottom: 0;
+        padding-top: 32px;
+        padding-bottom: 29px;
+    }
+}
+
+.p-home-news__item:nth-of-type(1) {
+    padding-top: 0;
+}

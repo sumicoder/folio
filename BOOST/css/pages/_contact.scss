@@ -1,0 +1,170 @@
+@use "../child/child" as *;
+
+.l-contact {
+    &-mainVis {
+        height: 525px;
+        background-image: url(../img/contactVis.jpg);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        &__text {
+            position: absolute;
+            top: 50%;
+            left: 160px;
+            transform: translateY(-50%);
+            color: $MainCol;
+            &--title {
+                font-size: 6.4rem;
+                line-height: 82px;
+                vertical-align: bottom;
+                font-weight: 900;
+                letter-spacing: 2px;
+            }
+            &--sub {
+                font-size: 2.4rem;
+                &-span {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+    &-bread {
+        font-size: 1.6rem;
+        font-weight: 900;
+        margin: 75px 85px;
+        &__list {
+            display: flex;
+            &--item {
+                margin-right: 5px;
+                text-shadow: 0 4px 3px rgba($color: $MainCol, $alpha: 0.25);
+                &::after {
+                    content: "-";
+                }
+                &:last-child::after {
+                    content: "";
+                }
+            }
+            &--black {
+                color: $MainCol;
+            }
+        }
+    }
+    &--text {
+        text-align: center;
+        line-height: 2;
+        margin-bottom: 100px;
+    }
+    &--title {
+        font-size: 3.2rem;
+        margin-bottom: 50px;
+    }
+    &__wrap {
+        margin-bottom: 160px;
+        font-size: 1.6rem;
+    }
+    &__category {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        margin-bottom: 100px;
+        &--item {
+            padding: 30px;
+            font-size: 2rem;
+        }
+        &--radio {
+            transform: scale(1.5);
+            margin-right: 35px;
+        }
+    }
+    &__table {
+        margin-bottom: 40px;
+        width: 100%;
+        &--title {
+            padding: 35px 0;
+            width: 25%;
+            text-align: left;
+        }
+        &--text {
+            padding: 10px 0;
+        }
+        &--input {
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            font-size: 2rem;
+            padding: 20px;
+        }
+    }
+    &__form {
+        padding: 0 20px;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        &--subTitle {
+            margin-bottom: 5px;
+        }
+        &--textArea {
+            width: 100%;
+            height: 375px;
+            padding: 20px;
+            font-size: 2rem;
+            margin-bottom: 130px;
+        }
+        &--pri {
+            height: 375px;
+            overflow-y: scroll;
+            padding: 10px;
+            border: 1px solid $AccentCol;
+            margin-bottom: 160px;
+        }
+        &--mainTitle {
+            flex: 3.2rem;
+            margin-bottom: 30px;
+        }
+        &--title {
+            line-height: 2;
+            margin-bottom: 20px;
+        }
+        &--text {
+            margin-bottom: 30px;
+        }
+        &--list {
+            margin: 20px 0;
+        }
+        &--listItem {
+            margin-bottom: 10px;
+            margin-left: 40px;
+            list-style-type: decimal;
+        }
+        &--table {
+            margin-bottom: 30px;
+        }
+        &--tableTitle {
+            text-align: right;
+            &::after {
+                content: "：";
+            }
+        }
+        &--tableDesc {
+            padding-left: 10px;
+        }
+        &--endText {
+            text-align: right;
+            margin-bottom: 50px;
+        }
+        &--accept {
+            display: block;
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 130px;
+        }
+        &--acceptCheck {
+            margin-right: 20px;
+            transform: scale(1.3);
+        }
+        &--submit{
+            text-align: center;
+        }
+        .viewMoreBtn{
+            margin-bottom: 0;
+        }
+    }
+}

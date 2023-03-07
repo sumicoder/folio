@@ -1,0 +1,43 @@
+@use "../../foundation" as *;
+@use "home-common" as *;
+
+/*============================
+// p-home-contact
+============================*/
+.p-home-contact {
+    background-image: url("../images/contact-bg.jpg");
+    height: 340px;
+    background-size: cover;
+    background-position: top 50% left 44%;
+}
+
+.p-home-contact__inner {
+    max-width: $content-width;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 100px 15px;
+
+    @include mq(md) {
+        padding: 100px 25px;
+    }
+}
+
+.p-home-contact__title--heading {
+    @extend %p-home-section-title;
+}
+
+.p-home-contact__title--bar {
+    @extend %p-home-section-title-bar;
+}
+
+.p-home-contact__btn {
+    font-size: 16px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include mq(md) {
+        font-size: 20px;
+    }
+}

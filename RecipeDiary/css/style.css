@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0; 
+  box-sizing: border-box;
+  }
+
+  :root{
+    --main-color:#2b2a27;
+  }
+  
+  html{
+    font-size: 62.5%;
+    font-family: "Helvetica Neue", "Arial", "Hiragino Sans", "Meiryo", sans-serif;
+  }
+  
+  img{
+    max-width: 100%;
+  }
+
+  body{
+    text-align: center;
+    color: var(--main-color);
+    max-width: 100%;
+  }
+
+  .main__vis{
+    height: 100vh;
+  }
+
+  .main__vis--img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: top;
+  }
+
+  .main__wrap{
+    margin: 84px 5% 80px 5%;
+  }
+
+  .main__wrap--title{
+    font-size: 3.2em;
+  }
+
+  .main__wrap--text{
+    font-size: 1.6em;
+    margin-top: 20px;
+  }
+
+  .recipes{
+    display: flex;
+  }
+
+.recipes__img{
+  object-fit: cover;
+  height: 500px;
+  width: calc(100vw / 3);
+}
+
+.recipes__btn{
+  display: inline-block;
+  padding: 18px 60px;
+  border: 1px solid var(--main-color);
+  text-decoration: none;
+  color: var(--main-color);
+  margin-top: 60px;
+  font-size: 1.4em;
+}
+
+.footer{
+  margin-top: 80px;
+  padding: 20px;
+  font-size: 1.2em;
+  color: var(--main-color);
+}
+
+.footer__sns{
+  display: inline-block;
+  margin: 0 10px;
+  color: var(--main-color);
+}
+
+.footer__copy{
+  margin-top: 20px;
+}
+
+/* 下層ページ detail */
+.recipe-detail{
+  display: flex;
+}
+.recipe-detail__img{
+  height: 700px;
+  width: 50%;
+  object-fit: cover;
+}
+.recipe-menu{
+  width: 50%;
+  padding: 40px 5% 0 5%;
+  text-align: left;
+}
+.recipe-menu__title{
+  font-size: 2.8em;
+}
+.recipe-menu__text{
+  font-size: 1.6em;
+  margin-top: 20px;
+}
+.recipe-info{
+  margin-top: 40px;
+  font-size: 2em;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+}
+.recipe-info__material{
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.recipe-info__material--item{
+  width: 80%;
+  padding: 6px 0;
+  font-size: 1.6em;
+  border-bottom: 1px dotted #ccc;
+}
+.recipe-info__material--qty{
+  width: 20%;
+  text-align: right;
+  font-size: 1.6em;
+  padding: 6px 0;
+  border-bottom: 1px dotted #ccc;
+}
+.recipe-info__howto{
+  margin-top: 15px;
+}
+.recipe-info__howto--item{
+  margin-left: 20px;
+  padding: 6px 0;
+  font-size: 1.6em;
+  border-bottom: 1px dotted #ccc;
+}

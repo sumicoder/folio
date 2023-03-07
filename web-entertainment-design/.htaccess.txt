@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www.sumikkotsuru.com
+RewriteRule ^(.*)$ https://sumi-coder.com/$1 [R=301,L] 
+RewriteEngine on
+RewriteCond %{THE_REQUEST} ^.*/index.html
+RewriteRule ^(.*)index.html$ https://sumi-coder.com/$1 [R=301,L]

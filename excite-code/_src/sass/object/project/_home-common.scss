@@ -1,0 +1,64 @@
+@use "../../foundation" as *;
+
+/*============================
+// inner-style
+============================*/
+%p-home-inner {
+    max-width: $content-width;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 0 15px;
+
+    @include mq(md) {
+        padding: 0 25px;
+    }
+}
+
+/*============================
+// wrap-inner
+============================*/
+%p-home-wrap {
+    max-width: $wrapper-width;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 0 15px;
+
+    @include mq(md) {
+        padding: 0 25px;
+    }
+}
+
+/*============================
+// top-heading
+============================*/
+%p-home-heading {
+    margin-bottom: 30px;
+    padding-top: 50px;
+    text-align: center;
+}
+
+/*============================
+// section-title
+============================*/
+%p-home-section-title {
+    display: block;
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    color: $c-text;
+    text-transform: capitalize;
+}
+
+/*============================
+// section-title-ja
+============================*/
+%p-home-section-title-bar {
+    display: inline-block;
+    height: 4px;
+    width: 34px;
+    background-color: $c-text;
+    border-radius: 2px;
+    margin-bottom: 50px;
+}

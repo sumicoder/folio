@@ -1,0 +1,25 @@
+@charset "UTF-8";
+@use "../../foundation" as *;
+
+// ================================================================
+// c-section
+// ================================================================
+.c-section-heading {
+    display: inline-block;
+    text-transform: capitalize;
+    font-family: $montserrat;
+    border-bottom: 3px solid $c-main;
+    padding-bottom: rem(8);
+
+    @include txt(rem(24), $bold, $c-main, left);
+    @include txt-option(calc(32 / 24), 0px);
+
+    @include mq(pc) {
+        font-size: rem(40);
+        line-height: calc(48 / 40);
+    }
+}
+.c-section-heading--white {
+    color: #eaeaea;
+    border-bottom: 3px solid #eaeaea;
+}

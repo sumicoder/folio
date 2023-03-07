@@ -1,0 +1,153 @@
+@use "../child/child" as *;
+
+.l-news {
+    &-mainVis {
+        height: 525px;
+        background-image: url(../img/newsVis.jpg);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        &__text {
+            position: absolute;
+            top: 50%;
+            left: 160px;
+            transform: translateY(-50%);
+            color: $MainCol;
+            &--title {
+                font-size: 6.4rem;
+                line-height: 82px;
+                vertical-align: bottom;
+                font-weight: 900;
+                letter-spacing: 2px;
+            }
+            &--sub {
+                font-size: 2.4rem;
+                &-span {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+    &-bread {
+        font-size: 1.6rem;
+        font-weight: 900;
+        margin: 75px 85px;
+        &__list {
+            display: flex;
+            &--item {
+                margin-right: 5px;
+                text-shadow: 0 4px 3px rgba($color: $MainCol, $alpha: 0.25);
+                &::after {
+                    content: "-";
+                }
+                &:last-child::after {
+                    content: "";
+                }
+            }
+            &--black {
+                color: $MainCol;
+            }
+        }
+    }
+    @keyframes show {
+        0%{
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    &__list {
+        margin-bottom: 60px;
+        animation: show .3s ease-in-out; /* @keyframe show */
+        animation-fill-mode: forwards;
+        display: none;
+        &.is-show{
+            display: block;
+        }
+        &--item {
+            border-bottom: 1px solid $AccentCol;
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            position: relative;
+        }
+        &--img {
+            width: 300px;
+            margin: 0 30px;
+            object-fit: contain;
+        }
+        &--flex {
+            display: flex;
+
+            &Item {
+                margin: 0 auto;
+                padding: 50px 0;
+            }
+        }
+        &--title {
+            font-size: 2.4rem;
+        }
+        &--text {
+            font-size: 1.6rem;
+            line-height: 32px;
+        }
+        &--time {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            ::after {
+                content: " - TOPICS";
+            }
+        }
+    }
+    &__toggle {
+        margin-bottom: 170px;
+        &--flex {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+        &--item {
+            margin: 0 10px;
+            font-size: 1.4rem;
+            color: $MainCol;
+            background-color: #fff;
+            :hover{
+                background-color: rgba($color: $MainCol, $alpha: 0.1);
+            }
+        }
+        &--num {
+            display: inline-block;
+            color: $MainCol;
+            background-color: #fff;
+            width: 58px;
+            line-height: 58px;
+            font-weight: bold;
+            border: none;
+        }
+        .is-black {
+            color: $TextCol;
+            background-color: $MainCol;
+            pointer-events: none;
+        }
+        &--next {
+            color: $MainCol;
+            background-color: #fff;
+            display: inline-block;
+            width: 58px;
+            line-height: 58px;
+            font-weight: bold;
+            border: none;
+        }
+    }
+
+    .viewMoreBtn {
+        position: absolute;
+        right: 0;
+        bottom: 30px;
+        background-color: $MainCol;
+        color: $TextCol;
+        margin-bottom: 0;
+    }
+}

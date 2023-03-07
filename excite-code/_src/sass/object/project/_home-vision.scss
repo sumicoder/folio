@@ -1,0 +1,29 @@
+@use "../../foundation" as *;
+@use "home-common" as *;
+
+/*============================
+// p-home-vision
+============================*/
+.p-home-vision__inner {
+    max-width: $content-width;
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px 15px;
+
+    @include mq(md) {
+        padding: 100px 25px;
+    }
+}
+
+.p-home-vision__text{
+    margin-bottom: 30px;
+    font-size: 25px;
+}
+
+.p-home-vision__title--heading {
+    @extend %p-home-section-title;
+}
+
+.p-home-vision__title--bar {
+    @extend %p-home-section-title-bar;
+}

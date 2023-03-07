@@ -1,0 +1,51 @@
+@charset "UTF-8";
+@use "../../foundation" as *;
+
+// ================================================================
+// c-btn
+// ================================================================
+.c-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    height: 60px;
+    border-radius: 10px;
+    background: $c-sub;
+    border: 7px solid transparent;
+    text-transform: capitalize;
+    transition: all 0.3s;
+}
+.c-btn__text {
+    display: inline-flex;
+    font-family: $montserrat;
+    transition: all 0.3s;
+
+    @include txt(rem(20), $medium, $c-black, left);
+    @include txt-option(calc(20 / 20), 0px);
+}
+.c-btn__text::after {
+    content: url(../images/btn-arrow--black.svg);
+    display: inline-flex;
+    align-items: center;
+    margin-left: 5px;
+    transition: all 0.3s 0.3s;
+}
+.c-btn__text--white {
+    color: $c-white;
+}
+@media (hover: hover) {
+    .c-btn:hover {
+        background: $c-white;
+        border: 7px solid $c-sub;
+        opacity: 1;
+    }
+    .c-btn:hover .c-btn__text {
+        color: $c-sub;
+        opacity: 1;
+    }
+    .c-btn:hover .c-btn__text::after {
+        content: url(../images/btn-arrow--yellow.svg);
+        opacity: 1;
+    }
+}

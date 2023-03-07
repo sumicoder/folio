@@ -1,0 +1,55 @@
+@charset "UTF-8";
+@use "../../foundation" as *;
+
+//============================
+// home-fv
+//============================
+.p-home-fv {
+    padding-block: rem(103);
+    background-image: url(../images/fvSP.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include mq(pc) {
+        background-image: url(../images/fv.jpg);
+        padding-block: rem(105);
+    }
+}
+.p-home-fv__inner {
+}
+.p-home-fv__catch {
+    min-width: rem(292);
+    width: calc(292 / 390 * 100%);
+    margin-inline: auto;
+    background: rgba($color: $c-main, $alpha: 0.4);
+    padding: rem(40);
+    font-family: $montserrat;
+
+    @include mq(pc) {
+        max-width: rem(467);
+        width: rem(467);
+        margin-left: 0;
+        padding: rem(56);
+    }
+}
+.p-home-fv__catch-primary {
+    @include txt(clamp(48px, 10vw, 80px), $bold, $c-white, left);
+    @include txt-option(calc(60 / 48), 0px);
+
+    @include mq(pc) {
+        font-size: rem(80);
+        line-height: calc(100 / 80);
+    }
+}
+.p-home-fv__catch-sub {
+    margin-top: rem(16);
+    @include txt(rem(14), $bold, $c-white, left);
+    @include txt-option(calc(18 / 14), 0px);
+
+    @include mq(pc) {
+        margin-top: rem(24);
+        font-size: rem(24);
+        line-height: calc(32 / 24);
+    }
+}

@@ -1,0 +1,57 @@
+@use "../foundation" as *;
+@use "../global" as *;
+
+.l-header {
+    background-color: $c-base;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__inner {
+        @extend .flex;
+        
+        padding: 0 15px;
+        text-align: left;
+
+        @include mq(lg) {
+            align-items: center;
+        }
+    }
+    &__logo {
+        width: 80px;
+        margin: 8px 0;
+
+        @include mq(lg) {
+            width: 100px;
+            margin-right: 60px;
+        }
+    }
+    &__ul {
+        font-size: 14px;
+        display: flex;
+    }
+
+    &__li {
+        margin-right: 30px;
+    }
+
+    &__contact{
+        display: none;
+        font-size: 12px;
+
+        @include mq(lg){
+            display: inline-block;
+            padding: 0 50px;
+            line-height: 80px;
+            text-align: center;
+            background-color: $c-accent;
+            color: $c-primary;
+
+            &:hover{
+                cursor: pointer;
+                background-color: rgba($color: $c-accent-light, $alpha: 1.0);
+            }
+        }
+    }
+}

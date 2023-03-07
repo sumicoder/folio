@@ -1,0 +1,195 @@
+html{
+  font-size: 100%;
+}
+
+body{
+  font-family: Meiryo;
+}
+
+* {
+margin: 0;
+padding: 0; 
+box-sizing: border-box;
+}
+
+img{
+  max-width: 100%;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+dt,dd{
+  color: #24292e;
+}
+
+.wrapper{
+  max-width: 960px;
+  text-align: center;
+  margin: 0 auto 130px auto;
+  padding: 0 4%;
+}
+
+.section-title{
+  margin-bottom: 65px;
+  color: #24292e;
+}
+
+#header{
+  height: 270px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+
+#header img{
+  display: block;
+  line-height: 100%;
+}
+
+#header .header-nav ul{
+  display: flex;
+}
+
+#header li{
+  margin:10px 0 15px 30px;
+  font-size: 0.9rem;
+}
+
+#header a{
+  color: #24292e;
+}
+
+#header li:hover{
+  opacity: 0.7;
+}
+
+#header .header-nav img{
+  height: 20px;
+}
+
+main img{
+  height: 420px;
+  object-fit: cover;
+}
+
+.main-visual-pc{
+  margin-bottom: 80px;
+}
+.main-visual-sp{
+display:none;
+}
+
+#about .address,#about .text{
+  text-align: left;
+  font-size: 0.9rem;
+  color: #24292e;
+}
+
+#about .name{
+  margin-bottom: 30px;
+}
+
+#about .text{
+  margin-top: 30px;
+}
+
+#works ul{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#works li{
+  width: 31%;
+  margin-bottom: 22px;
+}
+
+#works img{
+  height: auto;
+}
+
+#news dl{
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  border-top: 1px solid #c8c8c8;
+  text-align: left;
+}
+
+#news dt,#news dd{
+  border-bottom: 1px solid #c8c8c8;
+  padding: 15px;
+}
+
+#news dt{
+  width: 20%;
+}
+
+#news dd{
+  width: 80%;
+}
+
+#contact dl{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+#contact dt{
+  width: 15%;
+}
+
+#contact dd{
+  width: 85%;
+  margin-bottom: 10px;
+}
+
+#contact input,#contact textarea{
+  width: 100%;
+  height: 43px;
+  border: 1px solid #c8c8c8;
+  font-size: 0.9rem;
+  padding: 10px;
+  font-family: Meiryo;
+}
+#contact input:focus,#contact textarea:focus{
+  outline: #c8c8c8;
+}
+
+#contact textarea{
+  height: 160px;
+}
+
+#contact .submit{
+  margin-top: 20px;
+  width: 200px;
+  height: 53px;
+  background-color: #24292e;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+#contact .submit:hover{
+  background-color: #fff;
+  color: #24292e;
+  border: 1px solid #24292e;
+}
+
+footer{
+  background-color: #24292e;
+  text-align: center;
+  color: #fff;
+  font-size: 10px;
+}
+
+footer p{
+  padding: 10px 20px;
+}

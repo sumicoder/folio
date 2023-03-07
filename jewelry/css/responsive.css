@@ -1,0 +1,35 @@
+@media (min-width:767px) {
+    .main__vis--cover {
+        display: block;
+        width: 90vw;
+        height: auto;
+        margin: 30px auto 0 auto;
+    }
+
+    .wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    .section__img--cover {
+        width: 50%;
+    }
+
+    .section__subtitle {
+        font-size: 24px;
+    }
+
+    .section__title {
+        font-size: 16px;
+    }
+
+    .concept__con {
+        width: 35%;
+        margin: 0 auto;
+    }
+
+    #work.wrapper {
+        flex-direction: row-reverse;
+    }
+
+}

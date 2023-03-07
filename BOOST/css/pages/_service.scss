@@ -1,0 +1,109 @@
+@use "../child/child" as *;
+
+.l-service {
+    &-mainVis {
+        height: 525px;
+        background-image: url(../img/serviceVis.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+
+        &__text {
+            position: absolute;
+            top: 50%;
+            left: 160px;
+            transform: translateY(-50%);
+            color: $MainCol;
+            &--title {
+                font-size: 6.4rem;
+                line-height: 82px;
+                vertical-align: bottom;
+                font-weight: 900;
+                letter-spacing: 2px;
+            }
+            &--sub {
+                font-size: 2.4rem;
+                &-span {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+    &-bread {
+        font-size: 1.6rem;
+        font-weight: 900;
+        margin: 75px 85px;
+        &__list {
+            display: flex;
+            &--item {
+                margin-right: 5px;
+                text-shadow: 0 4px 3px rgba($color: $MainCol, $alpha: 0.25);
+                &::after {
+                    content: "-";
+                }
+                &:last-child::after {
+                    content: "";
+                }
+            }
+            &--black {
+                color: $MainCol;
+            }
+        }
+    }
+
+    &-serviceConcept {
+        text-align: center;
+        font-size: 1.6rem;
+        &--img{
+            display: block;
+            width: 100%;
+            &-sp{
+                display: none;
+            }
+        }
+        &__text {
+            margin: 40px 0;
+            line-height: 32px;
+        }
+    }
+    &-serviceSummary {
+        max-width: 1050px;
+        margin: 160px auto 60px auto;
+        text-align: center;
+        :nth-child(2) {
+            flex-direction: row-reverse;
+        }
+        &__list {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 100px;
+        }
+        &__img {
+            width: 47%;
+        }
+        &__text {
+            width: 47%;
+            display: table;
+            &--middle {
+                display: table-cell;
+                vertical-align: middle;
+            }
+            text-align: left;
+            &--num {
+                width: 100%;
+                font-size: 2.5rem;
+                font-weight: bold;
+            }
+            &--title {
+                width: 100%;
+                font-size: 3rem;
+            }
+            &--desc {
+                width: 100%;
+                line-height: 30px;
+                font-size: 1.6rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,76 @@
+@charset "UTF-8";
+@use "../foundation" as *;
+
+//============================
+// dl-footer
+//============================
+.l-footer {
+    padding-block: rem(40);
+    background-color: $c-main;
+    text-align: center;
+    color: $c-white;
+
+    @include mq(pc) {
+        padding-block: rem(80);
+    }
+}
+.l-footer__logo {
+    width: rem(207);
+    margin-inline: auto;
+
+    @include mq(pc) {
+        width: rem(237);
+    }
+}
+.l-footer__logo-link {
+    transition: all 0.3s 0s ease;
+}
+.l-footer__logo-img {
+}
+.l-footer__nav-items {
+    margin-top: rem(16);
+    font-family: $montserrat;
+
+    @include txt(rem(16), $regular, $c-white, left);
+    @include txt-option(calc(16 / 16), 0px);
+
+    @include mq(pc) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: rem(40);
+        margin-top: rem(7);
+    }
+}
+.l-footer__nav-item:not(:first-of-type) {
+    margin-top: rem(8);
+
+    @include mq(pc) {
+        margin-top: 0;
+    }
+}
+.l-footer__nav-link {
+    display: block;
+    text-transform: capitalize;
+
+    @include txt(rem(16), $regular, $c-white, center);
+    @include txt-option(calc(24 / 16), 0px);
+
+    @include mq(pc) {
+        line-height: calc(16 / 16);
+    }
+}
+.l-footer__copyright {
+    display: inline-block;
+    margin-top: rem(32);
+    font-family: $montserrat;
+
+    @include txt(rem(12), $regular, $c-white, center);
+    @include txt-option(calc(16 / 12), 0px);
+
+    @include mq(pc) {
+        margin-top: rem(48);
+        font-size: rem(14);
+        line-height: calc(14 / 14);
+    }
+}

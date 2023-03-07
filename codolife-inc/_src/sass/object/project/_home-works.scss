@@ -1,0 +1,197 @@
+@charset "UTF-8";
+@use "../../foundation" as *;
+
+// ================================================================
+// p-home-works
+// ================================================================
+.p-home-works {
+    overflow-x: scroll;
+    padding-bottom: 40px;
+    
+    @include mq(pc) {
+        overflow: hidden;
+        padding-bottom: 60px;
+    }
+}
+
+// ----------------------------------------
+// マーキー
+// ----------------------------------------
+.p-home-works__marquee-text-wrapper {
+    overflow: hidden;
+}
+.p-home-works__marquee-text {
+    position: relative;
+    width: 1033px;
+    height: 164px;
+
+    @include mq(pc) {
+        width: 2949px;
+        height: 320px;
+    }
+}
+.p-home-works__marquee-text img {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    @include mq(pc) {
+        padding-left: 30px;
+    }
+}
+.p-home-works__marquee-text img:nth-child(1) {
+    animation: marquee1 20s linear infinite;
+}
+.p-home-works__marquee-text img:nth-child(2) {
+    animation: marquee2 20s linear infinite;
+}
+@keyframes marquee1 {
+    0% {
+        transform: translate(0%, -50%);
+    }
+    100% {
+        transform: translate(-100%, -50%);
+    }
+}
+@keyframes marquee2 {
+    0% {
+        transform: translate(100%, -50%);
+    }
+    100% {
+        transform: translate(0%, -50%);
+    }
+}
+
+// ----------------------------------------
+// 水平スクロール
+// ----------------------------------------
+.p-home-works__inner {
+    position: relative;
+    width: calc(100% - 180px);
+    height: 617px;
+    margin-left: 20px;
+
+    @include mq(pc) {
+        height: 929px;
+        margin-left: min(toVw(180), 180px);
+    }
+}
+.p-home-works__box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $c-white;
+    border-radius: 30px;
+    padding: 80px 45px;
+
+    @include mq(pc) {
+        border-radius: 60px;
+        padding: 120px 160px;
+    }
+}
+.p-home-works__title {
+    position: absolute;
+    top: 80px;
+    left: 0;
+
+    @include txt(12px, 400, $c-main, left);
+    @include txt-option(1.5, 0px);
+    font-family: $poppins;
+    writing-mode: vertical-rl;
+
+    @include mq(pc) {
+        top: 120px;
+        left: 60px;
+        font-size: 14px;
+    }
+}
+
+// ----------------------------------------
+// アイテム
+// ----------------------------------------
+.p-home-works__items {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.p-home-works__item {
+    width: 241px;
+
+    @include mq(pc) {
+        width: min(toVw(400), 400px);
+    }
+}
+.p-home-works__item + .p-home-works__item {
+    margin-left: 32px;
+
+    @include mq(pc) {
+        margin-left: min(toVw(56), 56px);
+    }
+}
+.p-home-works__image {
+    @include mq(pc) {
+        overflow: hidden;
+    }
+}
+.p-home-works__image img {
+    aspect-ratio: 240 / 320;
+    object-fit: cover;
+
+    @include mq(pc) {
+        width: 150%;
+        aspect-ratio: 600 / 533;
+    }
+}
+.p-home-works__item-title {
+    display: flex;
+    align-items: flex-start;
+    @include txt(14px, 400, $c-main, left);
+    @include txt-option(1.5, 0px);
+    margin-top: 10px;
+
+    @include mq(pc) {
+        font-size: min(toVw(14), 14px);
+        margin-top: min(toVw(16), 16px);
+    }
+}
+.p-home-works__item-title-number {
+    display: inline-block;
+
+    @include mq(pc) {
+        font-size: min(toVw(12), 12px);
+    }
+}
+.p-home-works__item-title-name {
+    display: inline-block;
+
+    @include mq(pc) {
+        margin-left: min(toVw(8), 8px);
+    }
+}
+.p-home-works__item-text {
+    @include txt(16px, 500, $c-main, left);
+    @include txt-option(1.4375, 0px);
+    border-bottom: 1px solid #a5a5a5;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    margin-top: 16px;
+
+    @include mq(pc) {
+        min-height: min(toVw(112), 112px);
+        font-size: min(toVw(16), 16px);
+        @include txt-option(1.5, 0px);
+        margin-top: min(toVw(8), 8px);
+    }
+}
+
+.p-home-works__button-wrapper {
+    text-align: center;
+    margin-top: 40px;
+
+    @include mq(pc) {
+        margin-top: 80px;
+    }
+}

@@ -1,0 +1,24 @@
+@media (max-width:834px) {
+    .recipes {
+        display: block;
+    }
+
+    .recipes__img {
+        width: 100%;
+        vertical-align: bottom;
+    }
+
+    .recipe-detail {
+        display: block;
+    }
+
+    .recipe-detail__img {
+        height: auto;
+        width: 100%;
+        vertical-align: bottom;
+    }
+
+    .recipe-menu {
+        width: 100%;
+    }
+}

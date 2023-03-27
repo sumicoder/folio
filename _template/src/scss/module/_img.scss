@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.img{
+    width: 1280px;
+    height: 720px;
+    margin-top: 80px;
+    img{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

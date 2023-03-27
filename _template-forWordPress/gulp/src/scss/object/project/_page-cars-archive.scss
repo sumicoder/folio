@@ -1,0 +1,96 @@
+@charset "UTF-8";
+@use "../../foundation" as *;
+
+//============================
+// archive-cars-fv
+//============================
+.p-archive-cars-fv {
+    background-image: url(../images/06_cars/cars-fv-SP.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: rem(600);
+    max-height: rem(600);
+    border-radius: 0 0 0 rem(40);
+
+    @include mq(pc) {
+        background-image: url(../images/06_cars/cars-fv.jpg);
+        height: rem(600);
+        border-radius: 0;
+    }
+}
+.p-archive-cars-fv__inner {
+    height: inherit;
+    position: relative;
+}
+.p-archive-cars-fv__heading {
+    font-size: rem(40);
+    line-height: calc(66 / 40);
+    font-family: $gotu;
+    color: $c-white;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(rem(60));
+
+    @include mq(pc) {
+        font-size: min(toVw(80), 80px);
+        line-height: calc(133 / 80);
+    }
+}
+
+//============================
+// cars-card
+//============================
+.p-cars-cars {
+    margin-top: rem(80);
+    padding-block: 0;
+
+    @include mq(pc) {
+        background-color: $c-light-gray;
+        margin-top: rem(120);
+        margin-left: auto;
+        margin-right: min(toVw(100), 100px);
+        padding-block: rem(80);
+        border-radius: 0 rem(40) rem(40) 0;
+    }
+}
+.p-cars-cars__inner {
+    @include mq(pc) {
+        padding-left: min(toVw(100), 100px);
+    }
+}
+.p-cars-cars__heading {
+    font-size: rem(20);
+    line-height: calc(29 / 20);
+    margin-top: rem(16);
+    text-align: left;
+    width: fit-content;
+    margin-inline: auto;
+
+    @include mq(pc) {
+        margin-top: rem(40);
+    }
+}
+.p-cars-cars__items {
+    margin-top: rem(16);
+    display: grid;
+    column-gap: rem(36);
+    row-gap: rem(80);
+
+    @include mq(pc) {
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: rem(40);
+    }
+}
+.p-cars-cars__btn-wrap {
+    margin-top: rem(40);
+    text-align: right;
+
+    @include mq(pc) {
+        margin-top: rem(80);
+        margin-right: rem(76);
+        text-align: right;
+    }
+}

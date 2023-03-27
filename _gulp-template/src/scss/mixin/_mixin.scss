@@ -1,0 +1,32 @@
+$breakpoint: (
+    xs: 'screen and (max-width:375px)',
+    ms: 'screen and (max-width:425px)',
+    sp: 'screen and (max-width:767px)',
+    tab: 'screen and (max-width:999px)',
+
+    s: 'screen and (max-width:640px)',
+    m: 'screen and (max-width:919px)',
+    l: 'screen and (max-width:1439px)',
+    xl: 'screen and (min-width:1440px)',
+    rs: 'screen and (min-width:641px)',
+);
+  
+@mixin mq($bp) {
+    @media #{map-get($breakpoint,$bp)} {
+      @content;
+    }
+}
+
+@mixin width($pc) {
+    width: 100%;
+    max-width: calc(#{$pc} + 40px);
+    margin: 0 auto;
+    padding: 0 20px;
+  
+    @include mq(s) {
+      padding-left: 16px;
+      padding-right: 16px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+}

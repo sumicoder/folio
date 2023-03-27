@@ -1,0 +1,20 @@
+.splide{
+    width: 100%;
+    height: 500px;
+    &__track{
+        width: 100%;
+        height: 100%;
+    }
+    &__list{
+        width: 100%;
+        height: 100%;
+    }
+    &__slide{
+        width: 100%;
+        height: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

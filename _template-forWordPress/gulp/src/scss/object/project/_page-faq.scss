@@ -1,0 +1,106 @@
+@charset "UTF-8";
+@use "../../foundation" as *;
+
+//============================
+// faq
+//============================
+.p-faq-faq {
+    margin-top: rem(80);
+
+    @include mq(pc) {
+        margin-top: rem(120);
+    }
+}
+.p-faq-faq .c-section-heading {
+    @include mq(pc) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-left: $padding-sp;
+    }
+}
+.p-faq-faq__inner {
+    position: relative;
+}
+.p-faq-faq__container {
+    max-width: rem(800);
+    width: 100%;
+    margin-inline: auto;
+}
+.p-faq-faq__wrap:not(:first-of-type) {
+    margin-top: rem(80);
+}
+.p-faq-faq__heading {
+    text-align: center;
+    font-size: rem(24);
+    line-height: calc(35 / 24);
+}
+.p-faq-faq__items {
+    margin-top: rem(24);
+
+    @include mq(pc) {
+        margin-top: rem(34);
+    }
+}
+.p-faq-faq__item:not(:first-of-type) {
+    margin-top: rem(24);
+}
+.p-faq-faq__head {
+    color: $c-white;
+    font-size: rem(20);
+    font-weight: $regular;
+    line-height: calc(29 / 20);
+}
+.p-faq-faq__accordion::marker {
+    display: none;
+}
+.p-faq-faq__accordion-marker {
+    height: 1px;
+    width: rem(32);
+    background-color: #eaeaea;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+.p-faq-faq__accordion-marker::before {
+    content: "";
+    position: absolute;
+    height: rem(32);
+    width: 1px;
+    background-color: #eaeaea;
+    transform: translate(15px, -50%);
+    transition: transform 0.3s ease;
+}
+.p-faq-faq__accordion.is-open .p-faq-faq__accordion-marker {
+    transform: rotate(180deg);
+}
+.p-faq-faq__accordion.is-open .p-faq-faq__accordion-marker::before {
+    transform: translate(15px, -50%) rotate(90deg);
+}
+.p-faq-faq__question {
+    background-color: $c-gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: rem(24);
+
+    @include mq(pc) {
+        padding: rem(26) rem(40);
+    }
+}
+.p-faq-faq__answer {
+    overflow: hidden;
+}
+.p-faq-faq__answer-inner {
+    font-size: rem(20);
+    line-height: calc(29 / 20);
+    padding: rem(24);
+    border: 1px solid $c-gray;
+
+    @include mq(pc) {
+        margin-top: rem(16);
+        padding: rem(40);
+    }
+}
+#details-content {
+    content-visibility: visible !important;
+}

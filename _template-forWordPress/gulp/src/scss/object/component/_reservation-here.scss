@@ -1,0 +1,65 @@
+@charset "UTF-8";
+@use "../../foundation" as *;
+
+//============================
+// Reservation here!
+//============================
+.c-reservation-here {
+    display: inline-block;
+    position: absolute;
+    width: rem(160);
+    height: rem(160);
+    right: rem(35);
+    bottom: rem(24);
+    line-height: rem(160);
+    text-align: center;
+    transition: opacity 0.3s ease;
+
+    @include mq(pc) {
+        bottom: rem(40);
+    }
+}
+.c-reservation-here span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    font-family: $gotu;
+    font-size: rem(19);
+    color: $c-white;
+
+    @include mq(pc) {
+        font-size: rem(16.92);
+        line-height: calc(16 / 16.92);
+    }
+}
+
+.c-reservation-here__circle {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: circle 20s infinite linear;
+}
+@keyframes circle {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.c-reservation-here__bg {
+    width: 100%;
+    height: 100%;
+    background: $c-gradation;
+    position: absolute;
+    z-index: -100;
+    transform: scale(0.74);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.c-reservation-here:hover,
+.c-reservation-here:hover .c-reservation-here__bg {
+    opacity: 1;
+}

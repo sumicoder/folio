@@ -1,0 +1,88 @@
+@charset "UTF-8";
+@use "../../foundation" as *;
+
+//============================
+// home-guide
+//============================
+.p-home-guide {
+    margin-top: rem(80);
+
+    @include mq(pc) {
+        margin-top: rem(120);
+    }
+}
+.p-home-guide__inner {
+    display: flex;
+    flex-direction: column;
+    gap: rem(8);
+
+    @include mq(pc) {
+        flex-direction: row;
+        gap: rem(93);
+    }
+}
+.p-home-guide__container {
+    width: 100%;
+}
+.p-home-guide__items {
+    max-width: rem(840);
+    width: 100%;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @include mq(pc) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+.p-home-guide__item {
+    min-width: rem(280);
+    min-height: rem(187);
+    border: solid #b9b9b9;
+    border-width: 1px 1px 1px 0;
+    border-radius: 0 rem(5) rem(5) 0;
+    position: relative;
+    z-index: 0;
+}
+.p-home-guide__item::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: rem(5);
+    filter: blur(2.5px);
+    background-image: url(../images/01_home/home-guide-bg.jpg);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+@media (hover: hover) {
+    .p-home-guide__card-link:hover,
+    .p-home-guide__item:hover::before,
+    .p-home-guide__item:hover .c-btn__icon-arrow--invert {
+        opacity: 1;
+    }
+}
+.p-home-guide__card-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: rem(16);
+}
+.p-home-guide__card-title {
+    font-size: rem(20);
+    font-weight: $medium;
+    line-height: calc(29 / 20);
+    text-align-last: left;
+}
+.p-home-guide__card-btn-wrap {
+    margin-top: rem(86);
+    text-align: right;
+}
+
+.p-home-guide__card-btn-wrap .c-btn {
+    justify-content: flex-end;
+}

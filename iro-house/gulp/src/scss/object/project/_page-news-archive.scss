@@ -1,0 +1,188 @@
+@charset "UTF-8";
+@use "../../foundation" as *;
+
+//============================
+// archive-news-fv
+//============================
+.p-archive-news-fv {
+    background-image: url(../images/10_news/news-fv-SP.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: rem(600);
+    max-height: rem(600);
+    border-radius: 0 0 0 rem(40);
+
+    @include mq(pc) {
+        background-image: url(../images/10_news/news-fv.jpg);
+        height: rem(600);
+        border-radius: 0;
+    }
+}
+.p-archive-news-fv__inner {
+    height: inherit;
+    position: relative;
+}
+.p-archive-news-fv__heading {
+    font-size: rem(40);
+    line-height: calc(66 / 40);
+    font-family: $gotu;
+    color: $c-white;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(rem(60));
+
+    @include mq(pc) {
+        font-size: min(toVw(80), 80px);
+        line-height: calc(133 / 80);
+    }
+}
+
+//============================
+// archive-news-list
+//============================
+.p-news-news {
+    margin-top: rem(80);
+    min-height: rem(80);
+
+    @include mq(pc) {
+        margin-top: rem(120);
+    }
+}
+.p-news-news__inner {
+    position: relative;
+}
+.p-news-news__inner .c-section-heading {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-left: $padding-sp;
+}
+.p-news-news__items {
+    max-width: rem(800);
+    margin-top: rem(8);
+    margin-inline: auto;
+
+    @include mq(pc) {
+        margin-top: rem(-40);
+    }
+}
+.p-news-news__item:nth-of-type(1) {
+    border-top: 1px solid #b9b9b9;
+}
+.p-news-news__item {
+    border-bottom: 1px solid #b9b9b9;
+}
+.p-news-news__card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-block: rem(16);
+
+    @include mq(pc) {
+        margin-block: rem(24);
+        padding-inline: rem(40);
+        align-items: center;
+    }
+}
+.p-news-news__card-date {
+    font-family: $gotu;
+    font-size: rem(14);
+    line-height: calc(23 / 14);
+}
+.p-news-news__card-title {
+    font-size: rem(16);
+    line-height: calc(24 / 16);
+    @include line-clamp(4);
+
+    @include mq(pc) {
+        @include line-clamp(2);
+    }
+}
+.p-news-news__card-img {
+    max-width: rem(250);
+    margin-left: auto;
+    margin-bottom: 0;
+    height: rem(127);
+    aspect-ratio: 170 / 127;
+    transition: opacity 0.3s ease;
+
+    @include mq(pc) {
+        height: rem(112);
+        width: rem(250);
+    }
+}
+.p-news-news__card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: rem(5);
+}
+.p-news-news__btn-wrap {
+    margin-top: rem(80);
+    text-align: center;
+}
+.p-news-news-pagenation {
+    margin-top: rem(80);
+
+    @include mq(pc) {
+        margin-top: rem(120);
+    }
+}
+.p-news-news-pagenation__inner {
+    display: flex;
+    gap: rem(20);
+    justify-content: center;
+
+    @include mq(pc) {
+        gap: rem(40);
+    }
+}
+.p-news-news-pagenation__inner > .page-numbers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $gotu;
+    color: $c-black;
+    font-size: rem(16);
+    line-height: calc(27 / 16);
+    width: rem(40);
+    height: rem(40);
+    border: 1px solid $c-main;
+    border-radius: 50%;
+    position: relative;
+}
+.p-news-news-pagenation__inner > .page-numbers.prev {
+    background-image: url(../images/00_common/prev-btn.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: rem(20);
+}
+.p-news-news-pagenation__inner > .page-numbers.next {
+    background-image: url(../images/00_common/next-btn.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    margin-left: rem(20);
+}
+.p-news-news-pagenation__inner > .page-numbers.dots {
+    border: none;
+}
+.p-news-news-pagenation__inner > .page-numbers.current {
+    color: $c-white;
+    background-color: $c-main;
+}
+@media (hover: hover) {
+    .p-news-news-pagenation__inner > .page-numbers:hover {
+        background-color: $c-main;
+        opacity: 1;
+        color: $c-white;
+    }
+    .p-news-news-pagenation__inner > .page-numbers.prev:hover {
+        background-image: url(../images/00_common/prev-btn-hover.svg);
+    }
+    .p-news-news-pagenation__inner > .page-numbers.next:hover {
+        background-image: url(../images/00_common/next-btn-hover.svg);
+    }
+}

@@ -1,0 +1,24 @@
+@charset "UTF-8";
+@use "../foundation" as *;
+
+//============================
+// l-main
+//============================
+.l-main {
+    background-color: $c-base;
+}
+
+//============================
+// l-inner
+//============================
+.l-inner {
+    max-width: rem(480);
+    width: 100%;
+    height: auto;
+    padding-inline: $padding-sp;
+    margin-inline: auto;
+    @include mq(pc) {
+        max-width: $inner + $padding-pc * 2;
+        padding-inline: $padding-pc;
+    }
+}

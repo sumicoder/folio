@@ -1,0 +1,25 @@
+@charset "UTF-8";
+@use "../../foundation" as *;
+
+//============================
+// home-fv
+//============================
+.p-home-fv {
+    background-image: url(../images/01_home/home-fv-SP.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0 0 0 rem(40);
+    height: 100vh;
+    max-height: rem(768);
+
+    @include mq(pc) {
+        background-image: url(../images/01_home/home-fv.jpg);
+        margin-left: calc(180 / $artboard * 100%);
+    }
+}
+.p-home-fv__inner {
+    height: inherit;
+    max-height: rem(768);
+    position: relative;
+}

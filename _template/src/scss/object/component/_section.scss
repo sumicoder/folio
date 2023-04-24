@@ -1,0 +1,17 @@
+@charset "UTF-8";
+@use "../../foundation" as *;
+
+// ================================================================
+// c-section
+// ================================================================
+.c-section-heading {
+    font-family: $gotu;
+    font-size: rem(16);
+    line-height: calc(27 / 16);
+    text-transform: capitalize;
+}
+.c-section-heading span {
+    @include mq(pc) {
+        writing-mode: vertical-rl;
+    }
+}

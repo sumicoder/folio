@@ -1,0 +1,46 @@
+@charset "UTF-8";
+@use "../../foundation" as *;
+
+//============================
+// home-cars
+//============================
+.p-home-cars {
+    margin-top: rem(80);
+    overflow-x: hidden;
+
+    @include mq(pc) {
+        margin-top: rem(120);
+    }
+}
+.p-home-cars__container {
+    margin-top: rem(8);
+
+    @include mq(pc) {
+        margin-top: rem(24);
+        overflow: visible;
+    }
+}
+.p-home-cars__items {
+    margin-top: rem(8);
+
+    @include mq(pc) {
+        display: flex;
+        margin-top: 0;
+    }
+}
+.p-home-cars__item:not(:first-of-type) {
+    margin-top: rem(80);
+
+    @include mq(pc) {
+        margin-top: 0;
+    }
+}
+.p-home-cars__btn-wrap {
+    margin-top: rem(40);
+    text-align: right;
+
+    @include mq(pc) {
+        margin-top: rem(80);
+        text-align: center;
+    }
+}

@@ -1,0 +1,25 @@
+.p-lesson4-1 {
+    .p-section {
+        height: 100vh;
+        &01 {
+            background-color: #d9d9d9;
+        }
+        &02 {
+            background-color: #f5deb3;
+        }
+        &03 {
+            background-color: #f0ffff;
+        }
+    }
+
+    .c-totop {
+        position: fixed;
+        bottom: 80px;
+        right: 80px;
+        opacity: 0;
+
+        &.is-active {
+            opacity: 1;
+        }
+    }
+}

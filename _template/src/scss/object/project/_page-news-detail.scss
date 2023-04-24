@@ -1,0 +1,103 @@
+@charset "UTF-8";
+@use "../../foundation" as *;
+
+//============================
+// news-detail-fv
+//============================
+.p-news-detail-fv {
+    background-image: url(../images/10_news/news-fv-SP.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: rem(600);
+    max-height: rem(600);
+    border-radius: 0 0 0 rem(40);
+
+    @include mq(pc) {
+        background-image: url(../images/10_news/news-fv.jpg);
+        height: rem(600);
+        border-radius: 0;
+    }
+}
+.p-news-detail-fv__inner {
+    height: inherit;
+    position: relative;
+}
+.p-news-detail-fv__heading {
+    font-size: rem(40);
+    line-height: calc(66 / 40);
+    font-family: $gotu;
+    color: $c-white;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(rem(60));
+
+    @include mq(pc) {
+        font-size: min(toVw(80), 80px);
+        line-height: calc(133 / 80);
+    }
+}
+
+//============================
+// news-detail
+//============================
+.p-news-detail {
+    margin-top: rem(80);
+
+    @include mq(pc) {
+        margin-top: rem(120);
+    }
+}
+.p-news-detail__inner {
+    max-width: rem(700);
+    width: 100%;
+    margin-inline: auto;
+}
+.p-news-detail__img {
+    margin: 0;
+}
+.p-news-detail__img img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+.p-news-detail__date {
+    display: block;
+    font-size: rem(14);
+    line-height: calc(23 / 14);
+    font-family: $gotu;
+    margin-top: rem(40);
+}
+.p-news-detail__title {
+    font-size: rem(20);
+    line-height: calc(24 / 20);
+    margin-top: rem(8);
+}
+.p-news-detail__body {
+    font-size: rem(16);
+    line-height: calc(23 / 16);
+    margin-top: rem(40);
+}
+.p-news-detail__btn-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: rem(120);
+    width: fit-content;
+    margin-inline: auto;
+    margin-top: rem(80);
+
+    @include mq(pc) {
+        margin-top: rem(120);
+    }
+}
+.p-news-detail__more-btn-wrap {
+    text-align: center;
+    margin-top: rem(40);
+    padding-bottom: rem(100);
+    @include mq(pc) {
+        text-align: right;
+        padding-bottom: rem(120);
+    }
+}

@@ -2,130 +2,103 @@
 <html lang="ja">
 
 <head>
-    <meta>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="一番みてもらいたい制作会社さんへのアピールとして多くの要素(アニメーションなど)を使用">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="shortcut icon" href="./images/favicon.ico">
-    <link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Poppins:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-    <!-- OGP -->
-    <meta property="og:title" content="Codolife Inc.">
-    <meta property="og:description" content="一番みてもらいたい制作会社さんへのアピールとして多くの要素(アニメーションなど)を使用">
-    <meta property="og:type" content="website">
-    <!-- サイトURL -->
-    <meta property="og:url" content="">
-    <!-- OGP画像URL -->
-    <meta property="og:image" content="">
-    <meta property="og:site_name" content="Codolife Inc.">
-    <meta property="og:locale" content="ja_JP">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@sumi_coder">
-    <meta name=”robots” content=”noindex,nofollow”> <!-- noindex -->
-    <title>株式会社Codolife</title>
-    <!-- JS読み込み -->
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js"
-        integrity="sha512-oUUeA7VTcWBqUJD/VYCBB4VeIE0g1pg5aRMiSUOMGnNNeCLRS39OlkcyyeJ0hYx2h3zxmIWhyKiUXKkfZ5Wryg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
-    <script defer src="./js/main.js"></script>
+	<meta>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="description" content="一番みてもらいたい制作会社さんへのアピールとして多くの要素(アニメーションなど)を使用">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="shortcut icon" href="./images/favicon.ico">
+	<link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
+	<!-- google fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<!-- OGP -->
+	<meta property="og:title" content="Codolife Inc.">
+	<meta property="og:description" content="一番みてもらいたい制作会社さんへのアピールとして多くの要素(アニメーションなど)を使用">
+	<meta property="og:type" content="website">
+	<!-- サイトURL -->
+	<meta property="og:url" content="">
+	<!-- OGP画像URL -->
+	<meta property="og:image" content="">
+	<meta property="og:site_name" content="Codolife Inc.">
+	<meta property="og:locale" content="ja_JP">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@sumi_coder">
+	<meta name=”robots” content=”noindex,nofollow”> <!-- noindex -->
+	<title>株式会社Codolife</title>
+	<!-- JS読み込み -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js" integrity="sha512-oUUeA7VTcWBqUJD/VYCBB4VeIE0g1pg5aRMiSUOMGnNNeCLRS39OlkcyyeJ0hYx2h3zxmIWhyKiUXKkfZ5Wryg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<!-- GSAP基本 -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+	<script defer src="./js/main.js"></script>
 </head>
 
 <body class="js-body">
-    <div class="js-mouse-stalker u-hidden-mobile"></div>
-    <header class="l-header">
-        <div class="l-header__inner l-inner">
-            <div class="l-header__content-container">
-                <h1 class="l-header__logo js-color-invert js-color-invert">
-                    <a class="l-header__logo-link" href="">
-                        <img class="l-header__logo-img" src="./images/00_common/logo.svg" alt="Codolife Inc.">
-                    </a>
-                </h1>
-                <nav class="l-header__nav u-hidden-mobile">
-                    <ul class="l-header__nav-items js-color-invert">
-                        <li class="l-header__nav-item"><a href="#" class="l-header__nav-link"><span
-                                    class="l-header__nav-text">Home<br>Home</span></a></li>
-                        <li class="l-header__nav-item"><a href="#concept" class="l-header__nav-link"><span
-                                    class="l-header__nav-text">Concept<br>Concept</span></a></li>
-                        <li class="l-header__nav-item"><a href="#service" class="l-header__nav-link"><span
-                                    class="l-header__nav-text">Service<br>Service</span></a></li>
-                        <li class="l-header__nav-item"><a href="#works" class="l-header__nav-link"><span
-                                    class="l-header__nav-text">Works<br>Works</span></a></li>
-                        <li class="l-header__nav-item"><a href="#about" class="l-header__nav-link"><span
-                                    class="l-header__nav-text">About<br>About</span></a></li>
-                        <li class="l-header__nav-item"><a href="#contact" class="l-header__nav-link"><span
-                                    class="l-header__nav-text">Contact<br>Contact</span></a></li>
-                    </ul>
-                    <a class="l-header__dl-button js-color-invert" href="">
-                        <span>DL</span>
-                        <p class="l-header__dl-circle"><img src="./images/00_common/dl-circle.svg"
-                                alt="Download here..." decoding="async"></p>
-                    </a>
-                </nav>
-                <button class="l-header__mobile-btn u-hidden-pc js-humburger-btn js-color-invert">
-                    <span class="l-header__mobile-btn-bar l-header__mobile-btn-bar--1 js-menu-open"></span>
-                    <span class="l-header__mobile-btn-bar l-header__mobile-btn-bar--2 js-menu-open"></span>
-                    <span class="l-header__mobile-btn-bar l-header__mobile-btn-bar--3 js-menu-open"></span>
-                    <span class="l-header__mobile-btn-bar l-header__mobile-btn-bar--4 js-menu-open"></span>
-                    <span class="l-header__mobile-btn-bar l-header__mobile-btn-bar--5 js-menu-open"></span>
-                    <span class="l-header__mobile-btn-bar l-header__mobile-btn-bar--6 js-menu-open"></span>
-                </button>
-                <nav class="l-header-mobile__nav u-hidden-pc js-nav-mobile">
-                    <ul class="l-header-mobile__nav-items js-color-invert">
-                        <li class="l-header-mobile__nav-item "><a href="#" class="l-header-mobile__nav-link"><span
-                                    class="l-header-mobile__nav-text">Home</span></a></li>
-                        <li class="l-header-mobile__nav-item "><a href="#concept"
-                                class="l-header-mobile__nav-link"><span
-                                    class="l-header-mobile__nav-text">Concept</span></a></li>
-                        <li class="l-header-mobile__nav-item "><a href="#service"
-                                class="l-header-mobile__nav-link"><span
-                                    class="l-header-mobile__nav-text">Service</span></a></li>
-                        <li class="l-header-mobile__nav-item "><a href="#works" class="l-header-mobile__nav-link"><span
-                                    class="l-header-mobile__nav-text">Works</span></a></li>
-                        <li class="l-header-mobile__nav-item "><a href="#about" class="l-header-mobile__nav-link"><span
-                                    class="l-header-mobile__nav-text">About</span></a></li>
-                        <li class="l-header-mobile__nav-item "><a href="#contact"
-                                class="l-header-mobile__nav-link"><span
-                                    class="l-header-mobile__nav-text">Contact</span></a></li>
-                        <a class="l-header__dl-button" href="">
-                            <span>DL</span>
-                            <p class="l-header__dl-circle"><img src="./images/00_common/dl-circle.svg"
-                                    alt="Download here..." decoding="async"></p>
-                        </a>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
-    <main>
-        <section class="p-home-fv" id="home-fv">
-            <div class="p-home-fv__copy">
-                <div class="p-home-fv__inner l-inner">
-                    <div class="p-home-fv__copy-main">
-                        <p class="p-home-fv__copy-main-1"><span class="js-fv-counter-anime" data-end="100"
-                                data-snap="1">0</span><span>%</span></p>
-                        <p class="p-home-fv__copy-main-2">
-                            <span class="p-hpme-fv__copy-databeats js-text-animation">databeats</span>
-                            <span class="p-home-fv__copy-emotions">
-                                <svg id="js-mask_anim" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 285 113">
-                                    <image xmlns:xlink="http://www.w3.org/1999/xlink"
-                                        xlink:href="./images/01_top/emotions.svg" mask="url(#js-clipmask)"></image>
-                                    <mask id="js-clipmask" maskUnits="objectBoundingBox">
-                                        <path class="p-home-fv__copy-emotion--mask" data-start="330" data-duration="50" d="M 10.00,77.00
+	<div class="js-mouse-stalker u-hidden-mobile"></div>
+	<header class="l-header">
+		<div class="l-header__inner l-inner">
+			<div class="l-header__content-container">
+				<h1 class="l-header__logo js-color-invert js-header-items">
+					<a class="l-header__logo-link" href="">
+						<img class="l-header__logo-img" src="./images/00_common/logo.svg" alt="Codolife Inc." width="148" height="19">
+					</a>
+				</h1>
+				<nav class="l-header__nav u-hidden-mobile">
+					<ul class="l-header__nav-items js-color-invert js-header-items">
+						<li class="l-header__nav-item"><a href="#" class="l-header__nav-link"><span class="l-header__nav-text">Home<br>Home</span></a></li>
+						<li class="l-header__nav-item"><a href="#concept" class="l-header__nav-link"><span class="l-header__nav-text">Concept<br>Concept</span></a></li>
+						<li class="l-header__nav-item"><a href="#service" class="l-header__nav-link"><span class="l-header__nav-text">Service<br>Service</span></a></li>
+						<li class="l-header__nav-item"><a href="#works" class="l-header__nav-link"><span class="l-header__nav-text">Works<br>Works</span></a></li>
+						<li class="l-header__nav-item"><a href="#about" class="l-header__nav-link"><span class="l-header__nav-text">About<br>About</span></a></li>
+						<li class="l-header__nav-item"><a href="#contact" class="l-header__nav-link"><span class="l-header__nav-text">Contact<br>Contact</span></a></li>
+					</ul>
+					<a class="l-header__dl-button js-color-invert js-dl-button" href="">
+						<span>DL</span>
+						<p class="l-header__dl-circle"><img src="./images/00_common/dl-circle.svg" alt="Download here..." decoding="async" width="100" height="100"></p>
+					</a>
+				</nav>
+				<button class="l-header__mobile-btn u-hidden-pc js-humburger-btn js-color-invert js-header-items">
+					<span class="l-header__mobile-btn-bar l-header__mobile-btn-bar--1 js-menu-open"></span>
+					<span class="l-header__mobile-btn-bar l-header__mobile-btn-bar--2 js-menu-open"></span>
+					<span class="l-header__mobile-btn-bar l-header__mobile-btn-bar--3 js-menu-open"></span>
+					<span class="l-header__mobile-btn-bar l-header__mobile-btn-bar--4 js-menu-open"></span>
+					<span class="l-header__mobile-btn-bar l-header__mobile-btn-bar--5 js-menu-open"></span>
+					<span class="l-header__mobile-btn-bar l-header__mobile-btn-bar--6 js-menu-open"></span>
+				</button>
+				<nav class="l-header-mobile__nav u-hidden-pc js-nav-mobile">
+					<ul class="l-header-mobile__nav-items js-color-invert">
+						<li class="l-header-mobile__nav-item "><a href="#" class="l-header-mobile__nav-link"><span class="l-header-mobile__nav-text">Home</span></a></li>
+						<li class="l-header-mobile__nav-item "><a href="#concept" class="l-header-mobile__nav-link"><span class="l-header-mobile__nav-text">Concept</span></a></li>
+						<li class="l-header-mobile__nav-item "><a href="#service" class="l-header-mobile__nav-link"><span class="l-header-mobile__nav-text">Service</span></a></li>
+						<li class="l-header-mobile__nav-item "><a href="#works" class="l-header-mobile__nav-link"><span class="l-header-mobile__nav-text">Works</span></a></li>
+						<li class="l-header-mobile__nav-item "><a href="#about" class="l-header-mobile__nav-link"><span class="l-header-mobile__nav-text">About</span></a></li>
+						<li class="l-header-mobile__nav-item "><a href="#contact" class="l-header-mobile__nav-link"><span class="l-header-mobile__nav-text">Contact</span></a></li>
+						<a class="l-header__dl-button js-dl-button" href="">
+							<span>DL</span>
+							<p class="l-header__dl-circle"><img src="./images/00_common/dl-circle.svg" alt="Download here..." decoding="async" width="100" height="100"></p>
+						</a>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<main>
+		<section class="p-home-fv" id="home-fv">
+			<div class="p-home-fv__copy">
+				<div class="p-home-fv__inner l-inner">
+					<div class="p-home-fv__copy-main">
+						<p class="p-home-fv__copy-main-1"><span class="p-home-fv__copy-main-1-1" id="home-fv-copy-main01"><span class="js-fv-counter-anime" id="js-fv-counter-anime" data-end="100" data-snap="1">0</span><span>%</span></span></p>
+						<p class="p-home-fv__copy-main-2">
+							<span class="p-hpme-fv__copy-databeats" id="js-text-animation">databeats</span>
+							<span class="p-home-fv__copy-emotions">
+								<svg class="p-home-fv__copy-mask-anim" id="js-mask-anim" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 285 113">
+									<image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./images/01_top/emotions.svg" mask="url(#js-clipmask)"></image>
+									<mask id="js-clipmask" maskUnits="objectBoundingBox">
+										<path class="p-home-fv__copy-emotion--mask" d="M 10.00,77.00
            C 21.38,70.38 31.72,56.33 27.75,52.50
              21.61,44.70 9.00,60.75 7.50,65.75
              3.00,74.00 6.26,89.99 7.50,90.75
@@ -176,520 +149,465 @@
              270.75,105.00 258.25,109.50 250.50,108.75
              240.85,107.43 243.00,95.93 243.50,96.00
              247.14,87.29 262.25,73.00 282.25,65.50" />
-                                    </mask>
-                                </svg>
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                <div class="p-home-fv__copy-sub">
-                    <div class="p-home-fv__inner l-inner">
-                        <p class="p-home-fv__copy-sub-text js-text-animation2">
-                            データは感情に打ち勝つ。<br>
-                            私たちはあらゆるデータを活用し<span class="u-hidden-pc">、</span><br class="u-hidden-pc">
-                            お客様の課題解決、<br class="u-hidden-mobile">
-                            目標達成へ向けて全力を尽くします。
-                        </p>
-                    </div>
-                </div>
-            </div>
+									</mask>
+								</svg>
+							</span>
+						</p>
+					</div>
+				</div>
+				<div class="p-home-fv__copy-sub" id="home-fv-copy-sub-bg">
+					<div class="p-home-fv__inner l-inner">
+						<p class="p-home-fv__copy-sub-texts">
+							<span class="p-home-fv__copy-sub-text"><span class="p-home-fv__copy-sub-char" id="js-text-animation2">データは感情に打ち勝つ。</span></span><br>
+							<span class="p-home-fv__copy-sub-text"><span class="p-home-fv__copy-sub-char" id="js-text-animation2">私たちはあらゆるデータを活用し<span class="u-hidden-pc">、</span><br class="u-hidden-pc">お客様の課題解決、</span></span><br class="u-hidden-mobile">
+							<span class="p-home-fv__copy-sub-text"><span class="p-home-fv__copy-sub-char" id="js-text-animation2">目標達成へ向けて全力を尽くします。</span></span>
+						</p>
+					</div>
+				</div>
+			</div>
 
-            <!-- スクロールダウン -->
-            <div class="p-home-fv__scroll-down">
-                <div class="c-scroll-down"><span></span></div>
-            </div>
-        </section>
+			<!-- スクロールダウン -->
+			<div class="p-home-fv__scroll-down">
+				<div class="c-scroll-down"><span></span></div>
+			</div>
+		</section>
 
+		<!-- message-->
+		<div class="p-home-message" id="message">
+			<div class="p-home-message__bg-image"></div>
 
-        <!-- message-->
-        <div class="p-home-message" id="message">
-            <div class="p-home-message__bg-image"></div>
+			<div class="p-home-message__inner l-inner--s">
+				<div class="p-home-message__content-container">
+					<!-- #01 Our Passion -->
+					<section class="p-home-message__section">
+						<h2 class="p-home-message__section-title"><span class="c-text-gradation--to-left">#01</span><span class="c-text-gradation--to-left">Our
+								Passion</span></h2>
+						<p class="p-home-message__section-text-1">我々が我々であることに<br>プライドを持って世界を<br>変える革命を起こす。</p>
+						<p class="p-home-message__section-text-2">私たちは、プライドと情熱を持って世の中、全てのクリエイティブに革命を起こします。<br>“Data
+							beats
+							emotions.”という言葉がありますが、データは感情に打ち勝つことができる可能性を秘めています。あらゆる視点からのデータを読み取り、最大限に活用しマーケティングで、企業を、世界をより良いものに変えていきます。<br>そこに全ての情熱を注いで日々、前進する集団が私たちです。
+						</p>
+					</section>
 
-            <div class="p-home-message__inner l-inner--s">
-                <div class="p-home-message__content-container">
-                    <!-- #01 Our Passion -->
-                    <section class="p-home-message__section">
-                        <h2 class="p-home-message__section-title"><span
-                                class="c-text-gradation--to-left">#01</span><span class="c-text-gradation--to-left">Our
-                                Passion</span></h2>
-                        <p class="p-home-message__section-text-1">我々が我々であることに<br>プライドを持って世界を<br>変える革命を起こす。</p>
-                        <p class="p-home-message__section-text-2">私たちは、プライドと情熱を持って世の中、全てのクリエイティブに革命を起こします。<br>“Data
-                            beats
-                            emotions.”という言葉がありますが、データは感情に打ち勝つことができる可能性を秘めています。あらゆる視点からのデータを読み取り、最大限に活用しマーケティングで、企業を、世界をより良いものに変えていきます。<br>そこに全ての情熱を注いで日々、前進する集団が私たちです。
-                        </p>
-                    </section>
+					<!-- #02 Our Mission -->
+					<section class="p-home-message__section">
+						<h2 class="p-home-message__section-title"><span class="c-text-gradation--to-left">#02</span><span class="c-text-gradation--to-left">Our
+								Mission</span></h2>
+						<p class="p-home-message__section-text-1">我々が果たすべき使命。</p>
+						<p class="p-home-message__section-text-2">
+							どこに情熱を注いでいるのか。<br>チームとして果たすべき使命、解決すべき問題。そこから細分化を行い、一人ひとりの使命をあらいだし、各プロフェッショナルへ振り分けます。個々で戦うのではなく、チーム戦で最高のパフォーマンスを発揮し、全ての与えられた使命をクリアにしていきます。
+						</p>
+					</section>
 
-                    <!-- #02 Our Mission -->
-                    <section class="p-home-message__section">
-                        <h2 class="p-home-message__section-title"><span
-                                class="c-text-gradation--to-left">#02</span><span class="c-text-gradation--to-left">Our
-                                Mission</span></h2>
-                        <p class="p-home-message__section-text-1">我々が果たすべき使命。</p>
-                        <p class="p-home-message__section-text-2">
-                            どこに情熱を注いでいるのか。<br>チームとして果たすべき使命、解決すべき問題。そこから細分化を行い、一人ひとりの使命をあらいだし、各プロフェッショナルへ振り分けます。個々で戦うのではなく、チーム戦で最高のパフォーマンスを発揮し、全ての与えられた使命をクリアにしていきます。
-                        </p>
-                    </section>
+					<!-- #03 Our Solution -->
+					<section class="p-home-message__section">
+						<h2 class="p-home-message__section-title"><span class="c-text-gradation--to-left">#02</span><span class="c-text-gradation--to-left">Our
+								Solution</span></h2>
+						<p class="p-home-message__section-text-1">世界の物事を<br>プロフェッショナルに<br>解決するということ。</p>
+						<p class="p-home-message__section-text-2">
+							課題解決、解決後の変化量にこだわって各セクションのプロフェッショナルと共に現状の問題、今後起こりうる問題それぞれに細かく注力し、この世界を丸ごとより良いものに変えていきます。</p>
+					</section>
+				</div>
+			</div>
+		</div>
 
-                    <!-- #03 Our Solution -->
-                    <section class="p-home-message__section">
-                        <h2 class="p-home-message__section-title"><span
-                                class="c-text-gradation--to-left">#02</span><span class="c-text-gradation--to-left">Our
-                                Solution</span></h2>
-                        <p class="p-home-message__section-text-1">世界の物事を<br>プロフェッショナルに<br>解決するということ。</p>
-                        <p class="p-home-message__section-text-2">
-                            課題解決、解決後の変化量にこだわって各セクションのプロフェッショナルと共に現状の問題、今後起こりうる問題それぞれに細かく注力し、この世界を丸ごとより良いものに変えていきます。</p>
-                    </section>
-                </div>
-            </div>
-        </div>
+		<!-- concept-->
+		<section class="p-home-concept" id="concept">
+			<div class="l-inner">
+				<div class="p-home-concept__media">
+					<!-- テキスト-->
+					<div class="p-home-concept__content">
+						<h2 class="p-home-concept__title"><span class="c-text-gradation--to-right">Concept</span><span>Think and
+								Act.</span></h2>
+						<p class="p-home-concept__text">
+							行動を起こすことで何かが変わります。<br>行動を起こすことを怠ると、何も変えることはできません。物事がいい方向に動き出すことも、時には壁にぶち当たって足踏みすることもあるかもしれません。それも、全て行動したからです。<br><br>私たちはこれからも歩みを止めることなく常に前進していきます。
+						</p>
 
-        <!-- concept-->
-        <section class="p-home-concept" id="concept">
-            <div class="l-inner">
-                <div class="p-home-concept__media">
-                    <!-- テキスト-->
-                    <div class="p-home-concept__content">
-                        <h2 class="p-home-concept__title"><span
-                                class="c-text-gradation--to-right">Concept</span><span>Think and
-                                Act.</span></h2>
-                        <p class="p-home-concept__text">
-                            行動を起こすことで何かが変わります。<br>行動を起こすことを怠ると、何も変えることはできません。物事がいい方向に動き出すことも、時には壁にぶち当たって足踏みすることもあるかもしれません。それも、全て行動したからです。<br><br>私たちはこれからも歩みを止めることなく常に前進していきます。
-                        </p>
+						<div class="p-home-concept__button-wrapper">
+							<a class="c-btn" href="">
+								<span class="c-btn__text">view more</span>
+								<span class="c-btn__white-circle"></span>
+								<span class="c-btn__arrow"></span>
+							</a>
+						</div>
+					</div>
 
-                        <div class="p-home-concept__button-wrapper">
-                            <a class="c-btn" href="">
-                                <span class="c-btn__text">view more</span>
-                                <span class="c-btn__white-circle"></span>
-                                <span class="c-btn__arrow"></span>
-                            </a>
-                        </div>
-                    </div>
+					<!-- 画像-->
+					<figure class="p-home-concept__image"><img src="./images/01_top/concept.jpg" alt="コンセプトイメージ" decoding="async" width="1080" height="608"></figure>
+				</div>
+			</div>
+		</section>
+		<!-- service -->
+		<section class="c-section p-home-service js-color-invert-area" id="service">
+			<div class="l-inner">
+				<div class="p-home-service__title-wrapper">
+					<h2 class="c-section__title-1">
+						<span class="c-section__title-1-en">Service</span>
+						<span class="c-section__title-1-ja">事業内容</span>
+					</h2>
+				</div>
 
-                    <!-- 画像-->
-                    <figure class="p-home-concept__image"><img src="./images/01_top/concept.jpg" alt="コンセプトイメージ"
-                            decoding="async"></figure>
-                </div>
-            </div>
-        </section>
-        <!-- service -->
-        <section class="c-section p-home-service js-color-invert-area" id="service">
-            <div class="l-inner">
-                <div class="p-home-service__title-wrapper">
-                    <h2 class="c-section__title-1">
-                        <span class="c-section__title-1-en">Service</span>
-                        <span class="c-section__title-1-ja">事業内容</span>
-                    </h2>
-                </div>
+				<!-- アイテム -->
+				<ul class="p-home-service__items">
+					<li class="p-home-service__item">
+						<div class="p-home-service__number-area u-block-hidden-mobile">
+							<div class="p-home-service__number"><span class="c-text-gradation--to-right">#01</span>
+							</div>
+						</div>
+						<div class="p-home-service__content-area">
+							<h3 class="c-section__title-2"><span class="c-section__title-2-en">#01</span><span class="c-section__title-2-ja">Webサイト制作</span></h3>
+							<p class="p-home-service__text">
+								「伝える」ことを重視したWebサイト制作を行っております。Webサイト制作・LP制作・Lステップなどお客様のニーズに合わせて提案させていただきます。</p>
+							<figure class="p-home-service__image"><img src="./images/01_top/service-01.jpg" alt="" decoding="async" width="800" height="450"></figure>
+						</div>
+					</li>
+					<li class="p-home-service__item">
+						<div class="p-home-service__number-area u-block-hidden-mobile">
+							<div class="p-home-service__number"><span class="c-text-gradation--to-right">#02</span>
+							</div>
+						</div>
+						<div class="p-home-service__content-area">
+							<h3 class="c-section__title-2"><span class="c-section__title-2-en">#02</span><span class="c-section__title-2-ja">Webマーケティング</span></h3>
+							<p class="p-home-service__text">他社との差別化をはかるため、to B向け、to C向けにWebマーケティングを行っていきます。</p>
+							<figure class="p-home-service__image"><img src="./images/01_top/service-02.jpg" alt="" decoding="async" width="800" height="450"></figure>
+						</div>
+					</li>
+					<li class="p-home-service__item">
+						<div class="p-home-service__number-area u-block-hidden-mobile">
+							<div class="p-home-service__number"><span class="c-text-gradation--to-right">#03</span>
+							</div>
+						</div>
+						<div class="p-home-service__content-area">
+							<h3 class="c-section__title-2"><span class="c-section__title-2-en">#03</span><span class="c-section__title-2-ja">検索エンジン(SEO)対策</span></h3>
+							<p class="p-home-service__text">「集客」にフォーカスし、Googleのアルゴリズムを利用し、SEO対策を行っています。</p>
+							<figure class="p-home-service__image"><img src="./images/01_top/service-03.jpg" alt="" decoding="async" width="800" height="450"></figure>
+						</div>
+					</li>
+					<li class="p-home-service__item">
+						<div class="p-home-service__number-area u-block-hidden-mobile">
+							<div class="p-home-service__number"><span class="c-text-gradation--to-right">#04</span>
+							</div>
+						</div>
+						<div class="p-home-service__content-area">
+							<h3 class="c-section__title-2"><span class="c-section__title-2-en">#04</span><span class="c-section__title-2-ja">Web広告運用</span></h3>
+							<p class="p-home-service__text">データに基づいた的確な分析を行い、リスティング広告・ディスプレイ広告・SNS広告の運用代行を行っております。</p>
+							<figure class="p-home-service__image"><img src="./images/01_top/service-04.jpg" alt="" decoding="async" width="800" height="450"></figure>
+						</div>
+					</li>
+				</ul>
 
-                <!-- アイテム -->
-                <ul class="p-home-service__items">
-                    <li class="p-home-service__item">
-                        <div class="p-home-service__number-area u-block-hidden-mobile">
-                            <div class="p-home-service__number"><span class="c-text-gradation--to-right">#01</span>
-                            </div>
-                        </div>
-                        <div class="p-home-service__content-area">
-                            <h3 class="c-section__title-2"><span class="c-section__title-2-en">#01</span><span
-                                    class="c-section__title-2-ja">Webサイト制作</span></h3>
-                            <p class="p-home-service__text">
-                                「伝える」ことを重視したWebサイト制作を行っております。Webサイト制作・LP制作・Lステップなどお客様のニーズに合わせて提案させていただきます。</p>
-                            <figure class="p-home-service__image"><img src="./images/01_top/service-01.jpg" alt=""
-                                    decoding="async"></figure>
-                        </div>
-                    </li>
-                    <li class="p-home-service__item">
-                        <div class="p-home-service__number-area u-block-hidden-mobile">
-                            <div class="p-home-service__number"><span class="c-text-gradation--to-right">#02</span>
-                            </div>
-                        </div>
-                        <div class="p-home-service__content-area">
-                            <h3 class="c-section__title-2"><span class="c-section__title-2-en">#02</span><span
-                                    class="c-section__title-2-ja">Webマーケティング</span></h3>
-                            <p class="p-home-service__text">他社との差別化をはかるため、to B向け、to C向けにWebマーケティングを行っていきます。</p>
-                            <figure class="p-home-service__image"><img src="./images/01_top/service-02.jpg" alt=""
-                                    decoding="async"></figure>
-                        </div>
-                    </li>
-                    <li class="p-home-service__item">
-                        <div class="p-home-service__number-area u-block-hidden-mobile">
-                            <div class="p-home-service__number"><span class="c-text-gradation--to-right">#03</span>
-                            </div>
-                        </div>
-                        <div class="p-home-service__content-area">
-                            <h3 class="c-section__title-2"><span class="c-section__title-2-en">#03</span><span
-                                    class="c-section__title-2-ja">検索エンジン(SEO)対策</span></h3>
-                            <p class="p-home-service__text">「集客」にフォーカスし、Googleのアルゴリズムを利用し、SEO対策を行っています。</p>
-                            <figure class="p-home-service__image"><img src="./images/01_top/service-03.jpg" alt=""
-                                    decoding="async"></figure>
-                        </div>
-                    </li>
-                    <li class="p-home-service__item">
-                        <div class="p-home-service__number-area u-block-hidden-mobile">
-                            <div class="p-home-service__number"><span class="c-text-gradation--to-right">#04</span>
-                            </div>
-                        </div>
-                        <div class="p-home-service__content-area">
-                            <h3 class="c-section__title-2"><span class="c-section__title-2-en">#04</span><span
-                                    class="c-section__title-2-ja">Web広告運用</span></h3>
-                            <p class="p-home-service__text">データに基づいた的確な分析を行い、リスティング広告・ディスプレイ広告・SNS広告の運用代行を行っております。</p>
-                            <figure class="p-home-service__image"><img src="./images/01_top/service-04.jpg" alt=""
-                                    decoding="async"></figure>
-                        </div>
-                    </li>
-                </ul>
+				<div class="p-home-service__button-wrapper">
+					<a class="c-btn c-btn--white" href="">
+						<span class="c-btn__text">view more</span>
+						<span class="c-btn__white-circle"></span>
+						<span class="c-btn__arrow"></span>
+					</a>
+				</div>
+			</div>
+		</section>
 
-                <div class="p-home-service__button-wrapper">
-                    <a class="c-btn c-btn--white" href="">
-                        <span class="c-btn__text">view more</span>
-                        <span class="c-btn__white-circle"></span>
-                        <span class="c-btn__arrow"></span>
-                    </a>
-                </div>
-            </div>
-        </section>
+		<!-- works-->
+		<section class="c-section p-home-works" id="works">
+			<!-- マーキー-->
+			<div class="p-home-works__marquee-text-wrapper">
+				<figure class="p-home-works__marquee-text"><img src="./images/01_top/works-marquee-text.svg" alt="Always deliver more than expected." decoding="async" width="2941" height="172"><img src="./images/01_top/works-marquee-text.svg" alt="Always deliver more than expected." decoding="async"></figure>
+			</div>
+			<!-- 水平スクロール-->
+			<div class="p-home-works__inner js-works-horizontal-scroll-wrapper">
+				<div class="p-home-works__box js-works-horizontal-scroll">
+					<h2 class="p-home-works__title c-text-gradation--to-right">Our Works</h2>
+					<!-- アイテム-->
+					<ul class="p-home-works__items">
+						<li class="p-home-works__item">
+							<a class="p-home-works__link" href="">
+								<figure class="p-home-works__image"><img class="js-works-horizontal-scroll-image" src="./images/01_top/works-01.jpg" alt="株式会社iro codo.様" decoding="async" width="800" height="1066">
+								</figure>
+								<h3 class="p-home-works__item-title"><span class="p-home-works__item-title-number">#01</span><span class="p-home-works__item-title-name">株式会社iro codo.様</span></h3>
+								<p class="p-home-works__item-text">株式会社iro codo.様のブランディング・コンサル・Webサイト制作を担当させていただきました。
+								</p>
+							</a>
+						</li>
+						<li class="p-home-works__item">
+							<a class="p-home-works__link" href="">
+								<figure class="p-home-works__image"><img class="js-works-horizontal-scroll-image" src="./images/01_top/works-02.jpg" alt="9 Inc.様" decoding="async" width="800" height="1066"></figure>
+								<h3 class="p-home-works__item-title"><span class="p-home-works__item-title-number">#02</span><span class="p-home-works__item-title-name">9 Inc.様</span></h3>
+								<p class="p-home-works__item-text">9
+									Inc.様のWebサイト制作、求人サイト制作を担当させていただきました。<br>また、毎月のSNS運用を担当させていただいてます。</p>
+							</a>
+						</li>
+						<li class="p-home-works__item">
+							<a class="p-home-works__link" href="">
+								<figure class="p-home-works__image"><img class="js-works-horizontal-scroll-image" src="./images/01_top/works-03.jpg" alt="KOYABU様" decoding="async" width="800" height="1066"></figure>
+								<h3 class="p-home-works__item-title"><span class="p-home-works__item-title-number">#03</span><span class="p-home-works__item-title-name">KOYABU様</span></h3>
+								<p class="p-home-works__item-text">KOYABU様のWebサイト制作、<br>また、毎月のSNS運用を担当させていただいてます。</p>
+							</a>
+						</li>
+						<li class="p-home-works__item">
+							<a class="p-home-works__link" href="">
+								<figure class="p-home-works__image"><img class="js-works-horizontal-scroll-image" src="./images/01_top/works-04.jpg" alt="しろくま様" decoding="async" width="800" height="1066"></figure>
+								<h3 class="p-home-works__item-title"><span class="p-home-works__item-title-number">#04</span><span class="p-home-works__item-title-name">しろくま様</span></h3>
+								<p class="p-home-works__item-text">
+									飲食店しろくま様のブランディング、Webサイト制作、検索エンジン(SEO)対応、<br>また、毎月のSNS運用を担当させていただいてます。</p>
+							</a>
+						</li>
+						<li class="p-home-works__item">
+							<a class="p-home-works__link" href="">
+								<figure class="p-home-works__image"><img class="js-works-horizontal-scroll-image" src="./images/01_top/works-05.jpg" alt="Odin cafe + bar様" decoding="async" width="800" height="1066">
+								</figure>
+								<h3 class="p-home-works__item-title"><span class="p-home-works__item-title-number">#05</span><span class="p-home-works__item-title-name">Odin cafe + bar様</span></h3>
+								<p class="p-home-works__item-text">Odin cafe +
+									bar様のアートディレクション、Webサイト制作、MEO対策を担当させていただきました。
+								</p>
+							</a>
+						</li>
+						<li class="p-home-works__item">
+							<a class="p-home-works__link" href="">
+								<figure class="p-home-works__image"><img class="js-works-horizontal-scroll-image" src="./images/01_top/works-06.jpg" alt="株式会社あつかつ様" decoding="async" width="800" height="1066"></figure>
+								<h3 class="p-home-works__item-title"><span class="p-home-works__item-title-number">#06</span><span class="p-home-works__item-title-name">株式会社あつかつ様</span></h3>
+								<p class="p-home-works__item-text">あつかつ様のコンサルティング、Webサイト制作を担当させていただきました。</p>
+							</a>
+						</li>
+						<li class="p-home-works__item">
+							<a class="p-home-works__link" href="">
+								<figure class="p-home-works__image"><img class="js-works-horizontal-scroll-image" src="./images/01_top/works-07.jpg" alt="株式会社JTA様" decoding="async" width="800" height="1066"></figure>
+								<h3 class="p-home-works__item-title"><span class="p-home-works__item-title-number">#07</span><span class="p-home-works__item-title-name">株式会社JTA様</span></h3>
+								<p class="p-home-works__item-text">SARABI Inc.様のWebサイト制作、Webマーケティング全般を担当させていただきました。</p>
+							</a>
+						</li>
+						<li class="p-home-works__item">
+							<a class="p-home-works__link" href="">
+								<figure class="p-home-works__image"><img class="js-works-horizontal-scroll-image" src="./images/01_top/works-08.jpg" alt="歯科クリニックzOo様" decoding="async" width="800" height="1066"></figure>
+								<h3 class="p-home-works__item-title"><span class="p-home-works__item-title-number">#08</span><span class="p-home-works__item-title-name">歯科クリニックzOo様</span></h3>
+								<p class="p-home-works__item-text">歯科クリニックzOo様のWebサイト制作、クラウド導入支援サービスを担当させていただきました。</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
 
-        <!-- works-->
-        <section class="c-section p-home-works" id="works">
-            <!-- マーキー-->
-            <div class="p-home-works__marquee-text-wrapper">
-                <figure class="p-home-works__marquee-text"><img src="./images/01_top/works-marquee-text.svg"
-                        alt="Always deliver more than expected." decoding="async"><img
-                        src="./images/01_top/works-marquee-text.svg" alt="Always deliver more than expected."
-                        decoding="async"></figure>
-            </div>
-            <!-- 水平スクロール-->
-            <div class="p-home-works__inner js-works-horizontal-scroll-wrapper">
-                <div class="p-home-works__box js-works-horizontal-scroll">
-                    <h2 class="p-home-works__title c-text-gradation--to-right">Our Works</h2>
-                    <!-- アイテム-->
-                    <ul class="p-home-works__items">
-                        <li class="p-home-works__item">
-                            <a class="p-home-works__link" href="">
-                                <figure class="p-home-works__image"><img class="js-works-horizontal-scroll-image"
-                                        src="./images/01_top/works-01.jpg" alt="株式会社iro codo.様" decoding="async">
-                                </figure>
-                                <h3 class="p-home-works__item-title"><span
-                                        class="p-home-works__item-title-number">#01</span><span
-                                        class="p-home-works__item-title-name">株式会社iro codo.様</span></h3>
-                                <p class="p-home-works__item-text">株式会社iro codo.様のブランディング・コンサル・Webサイト制作を担当させていただきました。
-                                </p>
-                            </a>
-                        </li>
-                        <li class="p-home-works__item">
-                            <a class="p-home-works__link" href="">
-                                <figure class="p-home-works__image"><img class="js-works-horizontal-scroll-image"
-                                        src="./images/01_top/works-02.jpg" alt="9 Inc.様" decoding="async"></figure>
-                                <h3 class="p-home-works__item-title"><span
-                                        class="p-home-works__item-title-number">#02</span><span
-                                        class="p-home-works__item-title-name">9 Inc.様</span></h3>
-                                <p class="p-home-works__item-text">9
-                                    Inc.様のWebサイト制作、求人サイト制作を担当させていただきました。<br>また、毎月のSNS運用を担当させていただいてます。</p>
-                            </a>
-                        </li>
-                        <li class="p-home-works__item">
-                            <a class="p-home-works__link" href="">
-                                <figure class="p-home-works__image"><img class="js-works-horizontal-scroll-image"
-                                        src="./images/01_top/works-03.jpg" alt="KOYABU様" decoding="async"></figure>
-                                <h3 class="p-home-works__item-title"><span
-                                        class="p-home-works__item-title-number">#03</span><span
-                                        class="p-home-works__item-title-name">KOYABU様</span></h3>
-                                <p class="p-home-works__item-text">KOYABU様のWebサイト制作、<br>また、毎月のSNS運用を担当させていただいてます。</p>
-                            </a>
-                        </li>
-                        <li class="p-home-works__item">
-                            <a class="p-home-works__link" href="">
-                                <figure class="p-home-works__image"><img class="js-works-horizontal-scroll-image"
-                                        src="./images/01_top/works-04.jpg" alt="しろくま様" decoding="async"></figure>
-                                <h3 class="p-home-works__item-title"><span
-                                        class="p-home-works__item-title-number">#04</span><span
-                                        class="p-home-works__item-title-name">しろくま様</span></h3>
-                                <p class="p-home-works__item-text">
-                                    飲食店しろくま様のブランディング、Webサイト制作、検索エンジン(SEO)対応、<br>また、毎月のSNS運用を担当させていただいてます。</p>
-                            </a>
-                        </li>
-                        <li class="p-home-works__item">
-                            <a class="p-home-works__link" href="">
-                                <figure class="p-home-works__image"><img class="js-works-horizontal-scroll-image"
-                                        src="./images/01_top/works-05.jpg" alt="Odin cafe + bar様" decoding="async">
-                                </figure>
-                                <h3 class="p-home-works__item-title"><span
-                                        class="p-home-works__item-title-number">#05</span><span
-                                        class="p-home-works__item-title-name">Odin cafe + bar様</span></h3>
-                                <p class="p-home-works__item-text">Odin cafe +
-                                    bar様のアートディレクション、Webサイト制作、MEO対策を担当させていただきました。
-                                </p>
-                            </a>
-                        </li>
-                        <li class="p-home-works__item">
-                            <a class="p-home-works__link" href="">
-                                <figure class="p-home-works__image"><img class="js-works-horizontal-scroll-image"
-                                        src="./images/01_top/works-06.jpg" alt="株式会社あつかつ様" decoding="async"></figure>
-                                <h3 class="p-home-works__item-title"><span
-                                        class="p-home-works__item-title-number">#06</span><span
-                                        class="p-home-works__item-title-name">株式会社あつかつ様</span></h3>
-                                <p class="p-home-works__item-text">あつかつ様のコンサルティング、Webサイト制作を担当させていただきました。</p>
-                            </a>
-                        </li>
-                        <li class="p-home-works__item">
-                            <a class="p-home-works__link" href="">
-                                <figure class="p-home-works__image"><img class="js-works-horizontal-scroll-image"
-                                        src="./images/01_top/works-07.jpg" alt="株式会社JTA様" decoding="async"></figure>
-                                <h3 class="p-home-works__item-title"><span
-                                        class="p-home-works__item-title-number">#07</span><span
-                                        class="p-home-works__item-title-name">株式会社JTA様</span></h3>
-                                <p class="p-home-works__item-text">SARABI Inc.様のWebサイト制作、Webマーケティング全般を担当させていただきました。</p>
-                            </a>
-                        </li>
-                        <li class="p-home-works__item">
-                            <a class="p-home-works__link" href="">
-                                <figure class="p-home-works__image"><img class="js-works-horizontal-scroll-image"
-                                        src="./images/01_top/works-08.jpg" alt="歯科クリニックzOo様" decoding="async"></figure>
-                                <h3 class="p-home-works__item-title"><span
-                                        class="p-home-works__item-title-number">#08</span><span
-                                        class="p-home-works__item-title-name">歯科クリニックzOo様</span></h3>
-                                <p class="p-home-works__item-text">歯科クリニックzOo様のWebサイト制作、クラウド導入支援サービスを担当させていただきました。</p>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+		<!-- about -->
+		<section class="p-home-about" id="about">
+			<div class="l-inner">
+				<h2 class="c-section__title-1 c-section__title-1--theme"><span class="c-section__title-1-en">About
+						us</span><span class="c-section__title-1-ja">私たちについて</span></h2>
 
-        <!-- about -->
-        <section class="p-home-about" id="about">
-            <div class="l-inner">
-                <h2 class="c-section__title-1 c-section__title-1--theme"><span class="c-section__title-1-en">About
-                        us</span><span class="c-section__title-1-ja">私たちについて</span></h2>
+				<div class="p-home-about__content-container">
+					<!-- 左エリア -->
+					<div class="p-home-about__left-area">
+						<!-- 理念 -->
+						<div class="p-home-about__philosophy">
+							<div class="p-home-about__philosophy-text-wrapper">
+								<h3 class="c-text-gradation--to-right p-home-about__philosophy-title">Philosophy</h3>
+								<p class="p-home-about__philosophy-text">世界で戦うスキルと、世界を変える勢いを持って行動することを止めない会社であり続ける。</p>
+							</div>
+						</div>
+					</div>
 
-                <div class="p-home-about__content-container">
-                    <!-- 左エリア -->
-                    <div class="p-home-about__left-area">
-                        <!-- 理念 -->
-                        <div class="p-home-about__philosophy">
-                            <div class="p-home-about__philosophy-text-wrapper">
-                                <h3 class="c-text-gradation--to-right p-home-about__philosophy-title">Philosophy</h3>
-                                <p class="p-home-about__philosophy-text">世界で戦うスキルと、世界を変える勢いを持って行動することを止めない会社であり続ける。</p>
-                            </div>
-                        </div>
-                    </div>
+					<!-- 右エリア -->
+					<div class="p-home-about__right-area">
+						<!-- パフォーマンス -->
+						<div class="p-home-about__performance">
+							<ul class="p-home-about__performance-items">
+								<li class="p-home-about__performance-item">
+									<div class="p-home-about__performance-circle">
+										<h4 class="p-home-about__performance-title">前年度契約数</h4>
+										<p class="p-home-about__performance-value js-about-counter-anime" data-end="167" data-snap="1">0</p>
+										<span class="p-home-about__performance-unit">件</span>
+									</div>
+								</li>
+								<li class="p-home-about__performance-item">
+									<div class="p-home-about__performance-circle">
+										<h4 class="p-home-about__performance-title">顧客満足度</h4>
+										<p class="p-home-about__performance-value p-home-about__performance-value--point js-about-counter-anime" data-end="97.4" data-snap="0.1">0</p>
+										<span class="p-home-about__performance-unit">%</span>
+									</div>
+								</li>
+								<li class="p-home-about__performance-item">
+									<div class="p-home-about__performance-circle">
+										<h4 class="p-home-about__performance-title">契約継続率</h4>
+										<p class="p-home-about__performance-value p-home-about__performance-value--point js-about-counter-anime" data-end="80.2" data-snap="0.1">0</p>
+										<span class="p-home-about__performance-unit">%</span>
+									</div>
+								</li>
+								<li class="p-home-about__performance-item">
+									<div class="p-home-about__performance-circle">
+										<h4 class="p-home-about__performance-title">社員満足度</h4>
+										<p class="p-home-about__performance-value js-about-counter-anime" data-end="100" data-snap="1">0</p>
+										<span class="p-home-about__performance-unit">%</span>
+									</div>
+								</li>
+							</ul>
+						</div>
 
-                    <!-- 右エリア -->
-                    <div class="p-home-about__right-area">
-                        <!-- パフォーマンス -->
-                        <div class="p-home-about__performance">
-                            <ul class="p-home-about__performance-items">
-                                <li class="p-home-about__performance-item">
-                                    <div class="p-home-about__performance-circle">
-                                        <h4 class="p-home-about__performance-title">前年度契約数</h4>
-                                        <p class="p-home-about__performance-value js-about-counter-anime" data-end="167"
-                                            data-snap="1">0</p>
-                                        <span class="p-home-about__performance-unit">件</span>
-                                    </div>
-                                </li>
-                                <li class="p-home-about__performance-item">
-                                    <div class="p-home-about__performance-circle">
-                                        <h4 class="p-home-about__performance-title">顧客満足度</h4>
-                                        <p class="p-home-about__performance-value p-home-about__performance-value--point js-about-counter-anime"
-                                            data-end="97.4" data-snap="0.1">0</p>
-                                        <span class="p-home-about__performance-unit">%</span>
-                                    </div>
-                                </li>
-                                <li class="p-home-about__performance-item">
-                                    <div class="p-home-about__performance-circle">
-                                        <h4 class="p-home-about__performance-title">契約継続率</h4>
-                                        <p class="p-home-about__performance-value p-home-about__performance-value--point js-about-counter-anime"
-                                            data-end="80.2" data-snap="0.1">0</p>
-                                        <span class="p-home-about__performance-unit">%</span>
-                                    </div>
-                                </li>
-                                <li class="p-home-about__performance-item">
-                                    <div class="p-home-about__performance-circle">
-                                        <h4 class="p-home-about__performance-title">社員満足度</h4>
-                                        <p class="p-home-about__performance-value js-about-counter-anime" data-end="100"
-                                            data-snap="1">0</p>
-                                        <span class="p-home-about__performance-unit">%</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+						<!-- 情報 -->
+						<div class="p-home-about__info">
+							<dl class="p-home-about__info-items">
+								<dt class="p-home-about__info-title">社名</dt>
+								<dd class="p-home-about__info-data">株式会社 Codolife</dd>
+								<dt class="p-home-about__info-title">設立</dt>
+								<dd class="p-home-about__info-data">2019年4月5日</dd>
+								<dt class="p-home-about__info-title">電話番号</dt>
+								<dd class="p-home-about__info-data">0120-111-1111</dd>
+								<dt class="p-home-about__info-title">所在地</dt>
+								<dd class="p-home-about__info-data">〒123-4567<br>北海道札幌市六本木1-1</dd>
+								<dt class="p-home-about__info-title">資本金</dt>
+								<dd class="p-home-about__info-data">7,500,000円</dd>
+								<dt class="p-home-about__info-title">従業員</dt>
+								<dd class="p-home-about__info-data">91名</dd>
+								<dt class="p-home-about__info-title">事業内容</dt>
+								<dd class="p-home-about__info-data">
+									<span>Webマーケティング</span><span>Webサイト制作</span><span>検索エンジン(SEO)対策</span><span>Web広告運用</span><span>コンテンツマーケティング</span>
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-                        <!-- 情報 -->
-                        <div class="p-home-about__info">
-                            <dl class="p-home-about__info-items">
-                                <dt class="p-home-about__info-title">社名</dt>
-                                <dd class="p-home-about__info-data">株式会社 Codolife</dd>
-                                <dt class="p-home-about__info-title">設立</dt>
-                                <dd class="p-home-about__info-data">2019年4月5日</dd>
-                                <dt class="p-home-about__info-title">電話番号</dt>
-                                <dd class="p-home-about__info-data">0120-111-1111</dd>
-                                <dt class="p-home-about__info-title">所在地</dt>
-                                <dd class="p-home-about__info-data">〒123-4567<br>北海道札幌市六本木1-1</dd>
-                                <dt class="p-home-about__info-title">資本金</dt>
-                                <dd class="p-home-about__info-data">7,500,000円</dd>
-                                <dt class="p-home-about__info-title">従業員</dt>
-                                <dd class="p-home-about__info-data">91名</dd>
-                                <dt class="p-home-about__info-title">事業内容</dt>
-                                <dd class="p-home-about__info-data">
-                                    <span>Webマーケティング</span><span>Webサイト制作</span><span>検索エンジン(SEO)対策</span><span>Web広告運用</span><span>コンテンツマーケティング</span>
-                                </dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+		<!-- news -->
+		<section class="p-home-news" id="news">
+			<div class="l-inner">
+				<h2 class="c-section__title-1 c-section__title-1--theme"><span class="c-section__title-1-en">News</span><span class="c-section__title-1-ja">お知らせ</span></h2>
 
-        <!-- news -->
-        <section class="p-home-news" id="news">
-            <div class="l-inner">
-                <h2 class="c-section__title-1 c-section__title-1--theme"><span
-                        class="c-section__title-1-en">News</span><span class="c-section__title-1-ja">お知らせ</span></h2>
+				<div class="p-home-news__content-container">
+					<ul class="p-home-news__items">
+						<li class="p-home-news__item p-home-news__item--new">
+							<a class="p-home-news__link" href="">
+								<div class="p-home-news__header">
+									<time class="p-home-news__date" datetime="2022-11-23">2022-11-23</time>
+									<h3 class="p-home-news__title">Webマーケターを募集</h3>
+									<span class="p-home-news__new-badge"><span class="c-text-gradation--to-right">new</span></span>
+								</div>
+								<p class="p-home-news__text">当社ではWebマーケターを募集しています。詳細は下記の通りです。</p>
+							</a>
+						</li>
+						<li class="p-home-news__item p-home-news__item--new">
+							<a class="p-home-news__link" href="">
+								<div class="p-home-news__header">
+									<time class="p-home-news__date" datetime="2022-11-17">2022,11,17 </time>
+									<h3 class="p-home-news__title">実績公開UPしました。</h3>
+									<span class="p-home-news__new-badge"><span class="c-text-gradation--to-right">new</span></span>
+								</div>
+								<p class="p-home-news__text">株式会社iro code.様のサイトリニューアルに伴い、実績ページに公開させて</p>
+							</a>
+						</li>
+						<li class="p-home-news__item p-home-news__item--new">
+							<a class="p-home-news__link" href="">
+								<div class="p-home-news__header">
+									<time class="p-home-news__date" datetime="2022-10-10">2022,10,10 </time>
+									<h3 class="p-home-news__title">海外旅行休暇導入</h3>
+									<span class="p-home-news__new-badge"><span class="c-text-gradation--to-right">new</span></span>
+								</div>
+								<p class="p-home-news__text">アイディアは移動距離に比例する。という言葉の通り、当社では海外旅行休</p>
+							</a>
+						</li>
+						<li class="p-home-news__item">
+							<a class="p-home-news__link" href="">
+								<div class="p-home-news__header">
+									<time class="p-home-news__date" datetime="2022-08-19">2022,08,19 </time>
+									<h3 class="p-home-news__title">Webデザイナーを募集</h3>
+									<span class="p-home-news__new-badge"><span class="c-text-gradation--to-right">new</span></span>
+								</div>
+								<p class="p-home-news__text">当社ではWebデザイナーを募集しています。詳細は下記の通りです。</p>
+							</a>
+						</li>
+						<li class="p-home-news__item">
+							<a class="p-home-news__link" href="">
+								<div class="p-home-news__header">
+									<time class="p-home-news__date" datetime="2022-05-04">2022,05,04 </time>
+									<h3 class="p-home-news__title">HPをリニューアルしました</h3>
+									<span class="p-home-news__new-badge"><span class="c-text-gradation--to-right">new</span></span>
+								</div>
+								<p class="p-home-news__text">当社HPをリニューアルいたしました</p>
+							</a>
+						</li>
+						<li class="p-home-news__item">
+							<a class="p-home-news__link" href="">
+								<div class="p-home-news__header">
+									<time class="p-home-news__date" datetime="2022-04-19">2022,04,19 </time>
+									<h3 class="p-home-news__title">社内研修を行いました</h3>
+									<span class="p-home-news__new-badge"><span class="c-text-gradation--to-right">new</span></span>
+								</div>
+								<p class="p-home-news__text">4月16日に毎月恒例の社内研修を行いました。今回は、外部講師として株式会</p>
+							</a>
+						</li>
+					</ul>
+				</div>
 
-                <div class="p-home-news__content-container">
-                    <ul class="p-home-news__items">
-                        <li class="p-home-news__item p-home-news__item--new">
-                            <a class="p-home-news__link" href="">
-                                <div class="p-home-news__header">
-                                    <time class="p-home-news__date" datetime="2022-11-23">2022-11-23</time>
-                                    <h3 class="p-home-news__title">Webマーケターを募集</h3>
-                                    <span class="p-home-news__new-badge"><span
-                                            class="c-text-gradation--to-right">new</span></span>
-                                </div>
-                                <p class="p-home-news__text">当社ではWebマーケターを募集しています。詳細は下記の通りです。</p>
-                            </a>
-                        </li>
-                        <li class="p-home-news__item p-home-news__item--new">
-                            <a class="p-home-news__link" href="">
-                                <div class="p-home-news__header">
-                                    <time class="p-home-news__date" datetime="2022-11-17">2022,11,17 </time>
-                                    <h3 class="p-home-news__title">実績公開UPしました。</h3>
-                                    <span class="p-home-news__new-badge"><span
-                                            class="c-text-gradation--to-right">new</span></span>
-                                </div>
-                                <p class="p-home-news__text">株式会社iro code.様のサイトリニューアルに伴い、実績ページに公開させて</p>
-                            </a>
-                        </li>
-                        <li class="p-home-news__item p-home-news__item--new">
-                            <a class="p-home-news__link" href="">
-                                <div class="p-home-news__header">
-                                    <time class="p-home-news__date" datetime="2022-10-10">2022,10,10 </time>
-                                    <h3 class="p-home-news__title">海外旅行休暇導入</h3>
-                                    <span class="p-home-news__new-badge"><span
-                                            class="c-text-gradation--to-right">new</span></span>
-                                </div>
-                                <p class="p-home-news__text">アイディアは移動距離に比例する。という言葉の通り、当社では海外旅行休</p>
-                            </a>
-                        </li>
-                        <li class="p-home-news__item">
-                            <a class="p-home-news__link" href="">
-                                <div class="p-home-news__header">
-                                    <time class="p-home-news__date" datetime="2022-08-19">2022,08,19 </time>
-                                    <h3 class="p-home-news__title">Webデザイナーを募集</h3>
-                                    <span class="p-home-news__new-badge"><span
-                                            class="c-text-gradation--to-right">new</span></span>
-                                </div>
-                                <p class="p-home-news__text">当社ではWebデザイナーを募集しています。詳細は下記の通りです。</p>
-                            </a>
-                        </li>
-                        <li class="p-home-news__item">
-                            <a class="p-home-news__link" href="">
-                                <div class="p-home-news__header">
-                                    <time class="p-home-news__date" datetime="2022-05-04">2022,05,04 </time>
-                                    <h3 class="p-home-news__title">HPをリニューアルしました</h3>
-                                    <span class="p-home-news__new-badge"><span
-                                            class="c-text-gradation--to-right">new</span></span>
-                                </div>
-                                <p class="p-home-news__text">当社HPをリニューアルいたしました</p>
-                            </a>
-                        </li>
-                        <li class="p-home-news__item">
-                            <a class="p-home-news__link" href="">
-                                <div class="p-home-news__header">
-                                    <time class="p-home-news__date" datetime="2022-04-19">2022,04,19 </time>
-                                    <h3 class="p-home-news__title">社内研修を行いました</h3>
-                                    <span class="p-home-news__new-badge"><span
-                                            class="c-text-gradation--to-right">new</span></span>
-                                </div>
-                                <p class="p-home-news__text">4月16日に毎月恒例の社内研修を行いました。今回は、外部講師として株式会</p>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+				<div class="p-home-news__button-wrapper">
+					<a class="c-btn" href="">
+						<span class="c-btn__text">view more</span>
+						<span class="c-btn__white-circle"></span>
+						<span class="c-btn__arrow"></span>
+					</a>
+				</div>
+			</div>
+		</section>
+	</main>
 
-                <div class="p-home-news__button-wrapper">
-                    <a class="c-btn" href="">
-                        <span class="c-btn__text">view more</span>
-                        <span class="c-btn__white-circle"></span>
-                        <span class="c-btn__arrow"></span>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
+	<!-- footer -->
+	<footer class="l-footer js-footer js-color-invert-area">
+		<div class="l-footer__bg-image js-footer-bg-image"></div>
+		<div class="l-inner">
+			<!-- コンタクト -->
+			<section class="l-footer__contact">
+				<h2 class="l-footer__contact-title">Contact</h2>
+				<div class="l-footer__contact-button-wrapper">
+					<a class="c-btn c-btn--white" href="">
+						<span class="c-btn__text">view more</span>
+						<span class="c-btn__white-circle"></span>
+						<span class="c-btn__arrow"></span>
+					</a>
+				</div>
+			</section>
 
-    <!-- footer -->
-    <footer class="l-footer js-footer js-color-invert-area">
-        <div class="l-footer__bg-image js-footer-bg-image"></div>
-        <div class="l-inner">
-            <!-- コンタクト -->
-            <section class="l-footer__contact">
-                <h2 class="l-footer__contact-title">Contact</h2>
-                <div class="l-footer__contact-button-wrapper">
-                    <a class="c-btn c-btn--white" href="">
-                        <span class="c-btn__text">view more</span>
-                        <span class="c-btn__white-circle"></span>
-                        <span class="c-btn__arrow"></span>
-                    </a>
-                </div>
-            </section>
+			<!-- コンテナ -->
+			<div class="l-footer__content-container">
+				<!-- コンテンツ -->
+				<div class="l-footer__content">
+					<div class="l-footer__company-name">株式会社 Codolife</div>
+					<a class="l-footer__company-tel" href="tel:0120-111-1111">0120-111-1111</a>
 
-            <!-- コンテナ -->
-            <div class="l-footer__content-container">
-                <!-- コンテンツ -->
-                <div class="l-footer__content">
-                    <div class="l-footer__company-name">株式会社 Codolife</div>
-                    <a class="l-footer__company-tel" href="tel:0120-111-1111">0120-111-1111</a>
+					<!-- 会社情報 -->
+					<div class="l-footer__company-info">
+						<!-- 住所 -->
+						<dl class="l-footer__address">
+							<dt class="l-footer__address-title">北海道</dt>
+							<dd class="l-footer__address-data">北海道札幌市小野町1-1</dd>
+							<dt class="l-footer__address-title">東京</dt>
+							<dd class="l-footer__address-data">東京都港区2-2</dd>
+							<dt class="l-footer__address-title">熊本</dt>
+							<dd class="l-footer__address-data">熊本県熊本市城下町5-5</dd>
+							<dt class="l-footer__address-title">new york</dt>
+							<dd class="l-footer__address-data">2 Sea St, Brooklyn, NY, New York</dd>
+						</dl>
 
-                    <!-- 会社情報 -->
-                    <div class="l-footer__company-info">
-                        <!-- 住所 -->
-                        <dl class="l-footer__address">
-                            <dt class="l-footer__address-title">北海道</dt>
-                            <dd class="l-footer__address-data">北海道札幌市小野町1-1</dd>
-                            <dt class="l-footer__address-title">東京</dt>
-                            <dd class="l-footer__address-data">東京都港区2-2</dd>
-                            <dt class="l-footer__address-title">熊本</dt>
-                            <dd class="l-footer__address-data">熊本県熊本市城下町5-5</dd>
-                            <dt class="l-footer__address-title">new york</dt>
-                            <dd class="l-footer__address-data">2 Sea St, Brooklyn, NY, New York</dd>
-                        </dl>
+						<!-- SNS -->
+						<div class="l-footer__sns">
+							<div class="l-footer__sns-title">Follow us</div>
+							<ul class="l-footer__sns-items">
+								<li class="l-footer__sns-item"><a href="">Twitter</a></li>
+								<li class="l-footer__sns-item"><a href="">Instagram</a></li>
+								<li class="l-footer__sns-item"><a href="">Facebook</a></li>
+							</ul>
+							<!-- copyright（PC） -->
+							<div class="l-footer__copyright u-block-hidden-mobile">&copy;Codolife Inc. 2022</div>
+						</div>
+					</div>
+				</div>
+				<!-- 画像 -->
+				<div class="l-footer__image"><img src="./images/00_common/footer-image.png" alt="" decoding="async" width="1080" height="616">
+				</div>
+			</div>
 
-                        <!-- SNS -->
-                        <div class="l-footer__sns">
-                            <div class="l-footer__sns-title">Follow us</div>
-                            <ul class="l-footer__sns-items">
-                                <li class="l-footer__sns-item"><a href="">Twitter</a></li>
-                                <li class="l-footer__sns-item"><a href="">Instagram</a></li>
-                                <li class="l-footer__sns-item"><a href="">Facebook</a></li>
-                            </ul>
-                            <!-- copyright（PC） -->
-                            <div class="l-footer__copyright u-block-hidden-mobile">&copy;Codolife Inc. 2022</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- 画像 -->
-                <div class="l-footer__image"><img src="./images/00_common/footer-image.png" alt="" decoding="async">
-                </div>
-            </div>
+			<!-- copyright（Mobile） -->
+			<div class="l-footer__copyright u-block-hidden-pc">&copy;Codolife Inc. 2022</div>
+		</div>
+	</footer>
 
-            <!-- copyright（Mobile） -->
-            <div class="l-footer__copyright u-block-hidden-pc">&copy;Codolife Inc. 2022</div>
-        </div>
-    </footer>
-
-
-
-    </main>
+	</main>
 </body>
 
 </html>

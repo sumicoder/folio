@@ -27,14 +27,6 @@
     left: 0;
     width: 151px;
     z-index: 1000;
-    opacity: 0;
-
-    @include animation(
-        $name: fadeIn,
-        $delay: 7.5s,
-        $timing-function: cubic-bezier(0.19, 1, 0.22, 1)
-    );
-
     transition: filter 0.5s ease-in-out;
 
     &.is-inv {
@@ -49,13 +41,6 @@
 }
 .l-header__nav-items {
     padding-right: 23px;
-    opacity: 0;
-
-    @include animation(
-        $name: fadeIn,
-        $delay: 7.5s,
-        $timing-function: cubic-bezier(0.19, 1, 0.22, 1)
-    );
 }
 .l-header__nav-item {
     margin-top: 12px;
@@ -93,14 +78,6 @@
     margin-right: -8px;
     line-height: 100px;
     text-align: center;
-    transform: scale(0);
-
-    @include animation(
-        $name: DLbutton,
-        $duration: 0.4s,
-        $delay: 7.5s,
-        $timing-function: cubic-bezier(0.19, 1, 0.22, 1)
-    );
 
     @include mq(pc) {
         margin-top: 37px;
@@ -147,14 +124,6 @@
     height: 100px;
     width: 100px;
     margin-right: -20px;
-    opacity: 0;
-
-    @include animation(
-        $name: fadeIn,
-        $delay: 7.5s,
-        $timing-function: cubic-bezier(0.19, 1, 0.22, 1)
-    );
-
     transition: filter 0.5s ease-in-out;
 
     &.is-inv {

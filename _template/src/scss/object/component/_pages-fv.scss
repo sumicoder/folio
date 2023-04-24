@@ -1,0 +1,95 @@
+@charset "UTF-8";
+@use "../../foundation" as *;
+
+//============================
+// pages-fv
+//============================
+.p-pages-fv {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: rem(600);
+    max-height: rem(600);
+    border-radius: 0 0 0 rem(40);
+
+    @include mq(pc) {
+        height: rem(600);
+        border-radius: 0;
+    }
+}
+.p-pages-fv__inner {
+    height: inherit;
+    position: relative;
+}
+.p-pages-fv__heading {
+    font-size: rem(40);
+    line-height: calc(66 / 40);
+    font-family: $gotu;
+    color: $c-white;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(rem(60));
+
+    @include mq(pc) {
+        font-size: min(toVw(80), 80px);
+        line-height: calc(133 / 80);
+    }
+}
+.pages-fv--company {
+    background-image: url(../images/02_company/company-fv-SP.jpg);
+
+    @include mq(pc) {
+        background-image: url(../images/02_company/company-fv.jpg);
+    }
+}
+.pages-fv--service {
+    background-image: url(../images/03_service/service-fv-SP.jpg);
+
+    @include mq(pc) {
+        background-image: url(../images/03_service/service-fv.jpg);
+    }
+}
+.pages-fv--guide {
+    background-image: url(../images/04_guide/guide-fv-SP.jpg);
+
+    @include mq(pc) {
+        background-image: url(../images/04_guide/guide-fv.jpg);
+    }
+}
+.pages-fv--insurance-compensation {
+    background-image: url(../images/05_insurance-compensation/insurance-compensation-fv-SP.jpg);
+
+    @include mq(pc) {
+        background-image: url(../images/05_insurance-compensation/insurance-compensation-fv.jpg);
+    }
+}
+.pages-fv--cars {
+    background-image: url(../images/06_cars/cars-fv-SP.jpg);
+
+    @include mq(pc) {
+        background-image: url(../images/06_cars/cars-fv.jpg);
+    }
+}
+.pages-fv--cars-detail {
+    background-image: url(../images/07_cars-detail/cars-detail-fv-SP.jpg);
+
+    @include mq(pc) {
+        background-image: url(../images/07_cars-detail/cars-detail-fv.jpg);
+    }
+}
+.pages-fv--reservation {
+    background-image: url(../images/08_reservation/reservation-fv-SP.jpg);
+
+    @include mq(pc) {
+        background-image: url(../images/08_reservation/reservation-fv.jpg);
+    }
+}
+.pages-fv--faq {
+    background-image: url(../images/09_faq/faq-fv-SP.jpg);
+
+    @include mq(pc) {
+        background-image: url(../images/09_faq/faq-fv.jpg);
+    }
+}

@@ -1,0 +1,284 @@
+@charset "UTF-8";
+@use "../foundation" as *;
+
+//============================
+// l-header
+//============================
+.l-header {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: rem(90);
+    width: 100%;
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.05);
+
+    @include mq(pc) {
+        height: rem(100);
+    }
+}
+.l-header__404 {
+    background-color: $c-gray;
+}
+.l-header__logo {
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    background: $c-white;
+    width: auto;
+    height: min(toVw(180), 180px);
+    aspect-ratio: 239 / 180;
+    border-radius: 0 0 rem(40) 0;
+}
+.l-header__logo.is-view {
+    height: rem(100);
+    background: transparent;
+    transform: translateX(30%);
+}
+.l-header__logo-link {
+    width: 100%;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.l-header__logo-img {
+    width: fit-content;
+    height: min(toVw(128), 128px);
+    aspect-ratio: 128 / 128;
+    display: inline-block;
+}
+.l-header__logo-img.is-view {
+    height: rem(48);
+}
+.l-header__logo-title {
+    margin-left: rem(4);
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
+    display: inline-block;
+}
+.l-header__logo-title.is-show {
+    width: rem(126);
+    opacity: 1;
+    visibility: visible;
+}
+
+.l-header__inner {
+    height: inherit;
+
+    @include mq(pc) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+//============================
+// header PC
+//============================
+.l-header__nav {
+    color: $c-white;
+}
+.l-header__nav-items {
+    @include mq(pc) {
+        height: inherit;
+        gap: rem(32);
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
+.l-header__nav-items--en {
+    @include mq(pc) {
+        margin-top: rem(8);
+        gap: rem(40);
+    }
+}
+.l-header__nav-item {
+    height: inherit;
+    font-size: rem(14);
+    line-height: calc(20 / 14);
+}
+.l-header__nav-link {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+.l-header__nav-link-ruby {
+    display: block;
+    font-size: rem(12);
+    line-height: calc(16 / 12);
+    font-family: $gotu;
+    margin-block: rem(7);
+}
+@media (hover: hover) {
+    .l-header__nav-link::after {
+        position: absolute;
+        left: 0;
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: $c-white;
+        bottom: -3px;
+        transform: scale(0, 1);
+        transform-origin: right top;
+        transition: transform 0.3s, opacity 0.3s;
+    }
+    .l-header__nav-link:hover::after {
+        transform: scale(1, 1);
+        transform-origin: left top;
+        opacity: 0.7;
+    }
+    .u-color-invert .l-header__nav-link::after {
+        background: $c-hover;
+    }
+}
+
+//============================
+// header switcher
+//============================
+.l-header__switcher {
+    justify-content: flex-end;
+}
+.bogo-language-switcher {
+    display: flex;
+    justify-content: flex-start;
+    font-family: $gotu;
+    font-size: rem(14);
+    line-height: calc(23 / 14);
+    color: $c-main-text;
+    @include mq(pc) {
+        justify-content: flex-end;
+        color: $c-white;
+    }
+}
+.bogo-language-switcher .first::after {
+    content: "|";
+    margin-inline: 1em;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+.bogo-language-name {
+    position: relative;
+}
+@media (hover: hover) {
+    .bogo-language-name::after {
+        position: absolute;
+        left: 0;
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: $c-white;
+        bottom: -1px;
+        transform: scale(0, 1);
+        transform-origin: right top; /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の右端*/
+        transition: transform 0.3s, opacity 0.3s; /*変形の時間*/
+    }
+    .bogo-language-name:hover::after {
+        transform: scale(1, 1); /*ホバー後、x軸方向に1（相対値）伸長*/
+        transform-origin: left top; /*左から右に向かう*/
+        opacity: 0.7;
+    }
+    .u-color-invert .bogo-language-name::after {
+        background: $c-hover;
+    }
+}
+
+//============================
+// header mobile
+//============================
+.l-header__mobile-nav {
+    height: 100vh;
+    overflow-y: scroll;
+    margin-inline: calc(50% - 50vw);
+    color: $c-main-text;
+    background: $c-base;
+    padding-inline: $padding-sp;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    padding-block: rem(90);
+}
+.l-header__mobile-nav.is-show {
+    transform: translateX(0);
+}
+.l-header__mobile-nav-items {
+    display: flex;
+    flex-direction: column;
+}
+.l-header__mobile-nav-item {
+    margin-top: rem(24);
+}
+.l-header__mobile-nav-item:not(:first-of-type) {
+    margin-top: rem(40);
+}
+.l-header__mobile-nav-site-logo {
+    width: rem(142);
+    height: rem(64);
+    display: inline-block;
+}
+.l-header__mobile-nav-link {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;
+}
+.l-header__mobile-nav-link-ruby {
+    display: block;
+    font-size: rem(14);
+    line-height: calc(16 / 14);
+    font-family: $gotu;
+    margin-bottom: rem(4);
+}
+.l-header__mobile-nav .c-reservation-here {
+    bottom: 0;
+}
+.l-header__mobile-nav .c-reservation-here__circle,
+.l-header__mobile-nav .c-reservation-here__text {
+    filter: brightness(0);
+}
+
+//============================
+// l-header__menu-btn
+//============================
+.l-header__menu-btn {
+    width: rem(90);
+    height: inherit;
+    position: fixed;
+    z-index: 5000;
+    top: 0;
+    right: 0;
+    text-align: center;
+}
+.l-header__menu-btn--bar {
+    display: block;
+    width: rem(30);
+    height: rem(2);
+    margin-inline: auto;
+    background-color: $c-white;
+    border-radius: rem(2);
+    transition: all 0.3s ease;
+}
+.l-header__menu-btn--bar:nth-of-type(2) {
+    margin-block: rem(11);
+    transform-origin: right;
+}
+.l-header__menu-btn--bar:nth-of-type(1).is-show {
+    transform: rotate(-215deg);
+    background-color: $c-gray;
+}
+.l-header__menu-btn--bar:nth-of-type(2).is-show {
+    transform: translateX(-100%) scaleX(0);
+    background-color: $c-gray;
+    margin-block: rem(-2);
+}
+.l-header__menu-btn--bar:nth-of-type(3).is-show {
+    transform: rotate(215deg);
+    background-color: $c-gray;
+}

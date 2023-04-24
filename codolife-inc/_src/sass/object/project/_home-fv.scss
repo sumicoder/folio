@@ -48,18 +48,15 @@
     }
 }
 .p-home-fv__copy-main-1 {
+    overflow: hidden;
+}
+.p-home-fv__copy-main-1-1 {
     display: inline-block;
     @include txt(80px, 700, $c-main, left);
     @include txt-option(1, 0em);
     font-family: $poppins;
 
-    opacity: 0;
-    transform: translateY(10px);
-    @include animation(
-        $name: main,
-        $delay: 2.5s,
-        $timing-function: cubic-bezier(0.19, 1, 0.22, 1)
-    );
+    transform: translateY(100%);
 
     @include mq(pc) {
         font-size: min(toVw(160), 160px);
@@ -88,14 +85,8 @@
             background-clip: text;
             -webkit-background-clip: text;
             display: inline-block;
-            transform: translateY(110%);
-
-            @include animation(
-                $name: databeats,
-                $duration: 1s,
-                $delay: 4 + $i * 0.03s,
-                $timing-function: cubic-bezier(0.19, 1, 0.22, 1)
-            );
+            transition: transform 0.3s ease;
+            transform: translateY(100%);
         }
     }
 }
@@ -107,10 +98,13 @@
 
     @include mq(pc) {
         width: min(toVw(285), 285px);
-        margin-left: min(toVw(24),24px);
+        margin-left: min(toVw(24), 24px);
     }
 }
-.p-home-fv__copy-emotion--mask{
+.p-home-fv__copy-mask-anim {
+    opacity: 0;
+}
+.p-home-fv__copy-emotion--mask {
     fill: transparent;
     stroke: #fff;
     stroke-width: 10;
@@ -125,33 +119,23 @@
     position: relative;
     z-index: -1;
 
-    @include animation(
-        $name: line,
-        $duration: 2s,
-        $delay: 0.5s,
-        $timing-function: cubic-bezier(0.19, 1, 0.22, 1)
-    );
-
     @include mq(pc) {
         margin-top: -12px;
     }
 }
 .p-home-fv__copy-sub-text {
-    opacity: 0;
-
+	display: inline-block;
+    overflow: hidden;
     @include txt(20px, 700, $c-white, left);
     @include txt-option(1.8, 0px);
-
-    @include animation(
-        $name: fadeUp,
-        $delay: 6.5s,
-        $timing-function: cubic-bezier(0.19, 1, 0.22, 1)
-    );
 
     @include mq(pc) {
         font-size: min(toVw(32), 32px);
         @include txt-option(1.5, 0px);
     }
+}
+.p-home-fv__copy-sub-char {
+    display: inline-block;
 }
 
 // ----------------------------------------

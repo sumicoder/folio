@@ -1,0 +1,163 @@
+@charset "UTF-8";
+@use "../../foundation" as *;
+
+// ================================================================
+// c-btn
+// ================================================================
+.c-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    gap: 20px;
+    width: fit-content;
+    position: relative;
+    z-index: 0;
+}
+.c-btn__more {
+    display: inline-block;
+    font-family: $gotu;
+    font-size: rem(16);
+    line-height: calc(27 / 16);
+}
+.c-btn__icon {
+    display: inline-block;
+    border-radius: 50%;
+    width: rem(80);
+    height: rem(80);
+    position: relative;
+    opacity: 1;
+    transition: all 0.3s ease;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.c-btn__icon-arrow {
+    background-image: url(../images/00_common/more-btn.svg);
+}
+.c-btn__icon-back {
+    background-image: url(../images/00_common/back-btn.svg);
+}
+.c-btn__icon-totop {
+    background-image: url(../images/00_common/to-top-btn.svg);
+}
+.c-btn__icon-prev {
+    background-image: url(../images/00_common/prev-btn.svg);
+    background-size: auto;
+    border: 1px solid $c-main;
+}
+.c-btn__icon-next {
+    background-image: url(../images/00_common/next-btn.svg);
+    background-size: auto;
+    border: 1px solid $c-main;
+}
+.c-btn__icon-arrow--invert {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    background-image: url(../images/00_common/more-btn-hover.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+.c-btn__icon-back--invert {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: auto;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    background-image: url(../images/00_common/back-btn-hover.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+.c-btn__icon-totop--invert {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    background-image: url(../images/00_common/to-top-btn-hover.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+.c-btn__icon-prev--invert {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    background-image: url(../images/00_common/prev-btn-hover.svg);
+    background-color: $c-main;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+.c-btn__icon-next--invert {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    background-image: url(../images/00_common/next-btn-hover.svg);
+    background-color: $c-main;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+.c-btn__icon--small {
+    width: rem(40);
+    height: rem(40);
+}
+.c-btn__icon--medium {
+    width: rem(50);
+    height: rem(50);
+}
+@media (hover: hover) {
+    .c-btn:hover {
+        opacity: 1;
+    }
+    .c-btn:hover .c-btn__icon-arrow--invert {
+        opacity: 1;
+    }
+    .c-btn:hover .c-btn__icon-back--invert {
+        opacity: 1;
+    }
+    .c-btn:hover .c-btn__icon-totop--invert {
+        opacity: 1;
+    }
+    .c-btn:hover .c-btn__icon-prev--invert {
+        opacity: 1;
+    }
+    .c-btn:hover .c-btn__icon-next--invert {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,10 @@
+@charset "UTF-8";
+@use "../../foundation" as *;
+
+.u-margin-top80 {
+    margin-top: rem(40);
+
+    @include mq(pc) {
+        margin-top: rem(80);
+    }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>スクロールアニメーション</title>
+	<link rel="stylesheet" href="/css/styles.css">
+	<script src="js/main.js" defer></script>
+	<!-- 基本 -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+	<!-- ScrollTrigger -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&display=swap" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<main>
+		<section class="c-scroll">
+			<div class="c-scroll__inner c-inner">
+				<p class="c-scroll__head">アニメーション4種類</p>
+			</div>
+		</section>
+		<section class="c-scroll">
+			<div class="c-scroll__inner c-inner">
+				<p class="c-scroll__head">スクロール量に合わせて右から左に動くアニメーション</p>
+				<div class="c-scroll__area" id="scroll-area01">
+					<div class="c-scroll__box c-scroll__box01" id="scroll-box01"></div>
+				</div>
+			</div>
+		</section>
+		<section class="c-scroll">
+			<div class="c-scroll__inner c-inner">
+				<p class="c-scroll__head">スクロール量に合わせて左から右に動くアニメーション</p>
+				<div class="c-scroll__area" id="scroll-area02">
+					<div class="c-scroll__box c-scroll__box02" id="scroll-box02"></div>
+				</div>
+			</div>
+		</section>
+		<section class="c-scroll">
+			<div class="c-scroll__inner c-inner">
+				<p class="c-scroll__head">スクロール量に合わせて少しずつ大きくなるアニメーション(画面半分くらいで止まるように)</p>
+				<div class="c-scroll__area" id="scroll-area03">
+					<div class="c-scroll__box c-scroll__box03" id="scroll-box03"></div>
+				</div>
+			</div>
+		</section>
+		<section class="c-scroll">
+			<div class="c-scroll__inner c-inner">
+				<p class="c-scroll__head">スクロール量に合わせて少しずつ小さくなるアニメーション(画面半分くらいで止まるように)</p>
+				<div class="c-scroll__area" id="scroll-area04">
+					<div class="c-scroll__box c-scroll__box04" id="scroll-box04"></div>
+				</div>
+			</div>
+		</section>
+	</main>
+</body>
+
+</html>

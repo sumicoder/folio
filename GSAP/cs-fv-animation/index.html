@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>クリップパスFVアニメーション</title>
+	<link rel="stylesheet" href="/css/styles.css">
+	<script src="js/main.js" defer></script>
+	<!-- 基本 -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+	<!-- ScrollTrigger -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<main>
+		<div class="p-fv">
+			<div class="p-fv__inner c-inner">
+				<p class="p-fv__head">choose your vacation style</p>
+				<div class="p-fv__container">
+					<div class="p-fv__left">
+						<img class="p-fv__left-img01 js-img-clip02" src="./images/fv-left-img01.jpg" width="300" height="600">
+						<img class="p-fv__left-img02 js-img-clip01" src="./images/fv-left-img02.jpg" width="300" height="600">
+					</div>
+					<div class="p-fv__right">
+						<div class="p-fv__inner-r">
+							<img class="p-fv__right-img01 js-img-clip02" src="./images/fv-right-img01.jpg" width="300" height="600">
+							<img class="p-fv__right-img02 js-img-clip01" src="./images/fv-right-img02.jpg" width="300" height="600">
+						</div>
+					</div>
+					<p class="p-fv__text" id="js-fv-text01">seaside</p>
+					<p class="p-fv__text" id="js-fv-text02">mountain &amp; country</p>
+					<p class="p-fv__text" id="js-fv-text03">urban retreats</p>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+
+</html>

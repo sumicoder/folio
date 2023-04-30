@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>箱の中からリンクカードが現れて飛び出す</title>
+	<link rel="stylesheet" href="/css/styles.css">
+	<script src="js/main.js" defer></script>
+	<!-- 基本 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+<!-- ScrollTrigger -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+	<main>
+		<div class="cube" id="js-box">
+			<div class="surface back">
+				<p>back</p>
+			</div>
+			<div class="surface front">
+				<p>front</p>
+			</div>
+			<ul class="cube__items" id="js-cube-items">
+				<li class="cube__item cube-item" id="js-cube-item01"><div class="cube-item__inner">item</div></li>
+				<li class="cube__item cube-item" id="js-cube-item02"><div class="cube-item__inner">item</div></li>
+				<li class="cube__item cube-item" id="js-cube-item03"><div class="cube-item__inner">item</div></li>
+				<li class="cube__item cube-item" id="js-cube-item04"><div class="cube-item__inner">item</div></li>
+			</ul>
+			<div class="surface right">
+				<p>right</p>
+			</div>
+			<div class="surface left">
+				<p>left</p>
+			</div>
+			<div class="surface top" id="js-cube-top">
+				<p>top</p>
+			</div>
+			<div class="surface bottom">
+				<p>bottom</p>
+			</div>
+		</div>
+	</main>
+</body>
+
+</html>

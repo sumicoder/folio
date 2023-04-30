@@ -1,0 +1,55 @@
+@charset "UTF-8";
+@use "../../foundation" as *;
+
+.container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.screen {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+.screen__item {
+    display: block;
+    background-color: $c-base;
+    transform-origin: top;
+}
+.menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+    font-size: rem(24);
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    color: $c-main;
+    @include mq(pc) {
+        flex-direction: row;
+    }
+}
+
+.menu__item {
+    overflow: hidden;
+}
+
+.menu__link {
+	display: inline-block;
+    transform: translateY(100%);
+}
+
+.btn {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: rem(24);
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    padding: rem(16) rem(24);
+    z-index: 10;
+}

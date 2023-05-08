@@ -3,37 +3,41 @@ export function animation() {
     window.addEventListener("DOMContentLoaded", function () {
         const btn = document.querySelector(".btn");
         const menuTL = gsap.timeline();
-
+        let windowHeight = window.innerHeight;
+        let scale = (windowHeight / btn.clientHeight) * 2.2;
         btn.addEventListener("click", () => {
             if (!btn.classList.contains("is-active")) {
                 menuTL
-                    .to(".screen__item", {
-                        y: "100%",
-                        direction: 0.3,
-                        stagger: 0.05,
-                    })
+                    .to(".btn__bg", { scale: scale, borderRadius: "50%" })
+                    .to(".btn", { backgroundColor: "#fff" }, "<")
+                    .to(".btn", { "--bgc": "#dc143c" }, "<")
                     .fromTo(
                         ".menu__link",
-                        { y: "100%" },
-                        { y: 0, duration: 0.3, ease: "power2.in" },
-                        "-=0.4"
-                    )
-                    .to(btn, { color: "#333", duration: 0.3 }, "<");
-                btn.classList.add("is-active");
-            } else {
-                menuTL
-                    .fromTo(
-                        ".screen__item",
-                        { y: "-100%" },
+                        { y: 20, autoAlpha: 0 },
                         {
                             y: 0,
-                            direction: 0.3,
+                            autoAlpha: 1,
+                            duration: 0.3,
                             stagger: 0.05,
+                            ease: "none",
                         }
                     )
-                    .to(".menu__link", { y: "200%", duration: 0.3 }, "<")
-                    .to(btn, { color: "#fff", duration: 0.3 }, "<");
+                    .add(() => {
+                        btn.classList.add("is-active");
+                    });
+            } else {
                 btn.classList.remove("is-active");
+                gsap.to(".btn__bg", {
+                    scale: 0,
+                    duration: 0.3,
+                });
+                gsap.to(".btn", { "--bgc": "#fff" });
+                gsap.to(".menu__link", {
+                    autoAlpha: 0,
+                    duration: 0.3,
+                    ease: "none",
+                });
+                gsap.to(".btn", { backgroundColor: "#dc143c", duration: 0.3 });
             }
         });
     });

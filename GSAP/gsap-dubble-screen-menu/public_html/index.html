@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="./assets/css/style.css" />
+	<title>MENUを押すと2枚のスクリーンが出現</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+	<script src="./assets/js/script.js" defer></script>
+</head>
+
+<body>
+	<section class="container">
+		<div class="container__left">
+			<figure>
+				<img class="left__img" src="https://picsum.photos/id/299/200/500" alt="" width="200" height="500" decoding="async">
+			</figure>
+		</div>
+		<div class="container__right">
+			<div class="right__menu">
+				<h2 class="menu__header"><span class="menu__header-en">news</span></h2>
+				<ul class="menu__items">
+					<li class="menu__item"><a class="menu__link" href="">ニュースレター</a></li>
+					<li class="menu__item"><a class="menu__link" href="">セミナー</a></li>
+					<li class="menu__item"><a class="menu__link" href="">お知らせ</a></li>
+				</ul>
+			</div>
+			<div class="right__menu">
+				<h2 class="menu__header"><span class="menu__header-en">recruit</span></h2>
+				<ul class="menu__items">
+					<li class="menu__item"><a class="menu__link" href="">中途採用</a></li>
+					<li class="menu__item"><a class="menu__link" href="">インターン</a></li>
+					<li class="menu__item"><a class="menu__link" href="">その他</a></li>
+				</ul>
+			</div>
+			<div class="right__menu">
+				<h2 class="menu__header"><span class="menu__header-en">company</span></h2>
+				<ul class="menu__items">
+					<li class="menu__item"><a class="menu__link" href="">理念</a></li>
+					<li class="menu__item"><a class="menu__link" href="">事業所概要</a></li>
+					<li class="menu__item"><a class="menu__link" href="">その他</a></li>
+				</ul>
+			</div>
+		</div>
+		<button class="btn">
+			<span class="btn__icon"></span>
+			<span class="btn__icon"></span>
+		</button>
+	</section>
+</body>
+
+</html>

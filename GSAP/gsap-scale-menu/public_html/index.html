@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="./assets/css/style.css" />
-	<title>MENUを押すとスクリーンが時間差で消える</title>
+	<title>MENUを押すとボタンが大きくなる</title>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;900&display=swap">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
 	<script src="./assets/js/script.js" defer></script>
@@ -14,22 +14,19 @@
 
 <body>
 	<div class="container">
-		<div class="screen">
-			<span class="screen__item"></span>
-			<span class="screen__item"></span>
-			<span class="screen__item"></span>
-			<span class="screen__item"></span>
-			<span class="screen__item"></span>
-			<span class="screen__item"></span>
+		<div class="menu">
+			<ul class="menu__items">
+				<li class="menu__item"><a class="menu__link" href="">ホーム</a></li>
+				<li class="menu__item"><a class="menu__link" href="">会社概要</a></li>
+				<li class="menu__item"><a class="menu__link" href="">お知らせ</a></li>
+				<li class="menu__item"><a class="menu__link" href="">採用情報</a></li>
+			</ul>
+			<button class="btn">
+				<span class="btn__icon"></span>
+				<span class="btn__icon"></span>
+			</button>
+			<span class="btn__bg"></span>
 		</div>
-		<ul class="menu">
-			<li class="menu__item"><a class="menu__link" href="">HOME</a></li>
-			<li class="menu__item"><a class="menu__link" href="">NEWS</a></li>
-			<li class="menu__item"><a class="menu__link" href="">COMPANY</a></li>
-			<li class="menu__item"><a class="menu__link" href="">SERVICE</a></li>
-			<li class="menu__item"><a class="menu__link" href="">CONTACT</a></li>
-		</ul>
-		<button class="btn">MENU</button>
 	</div>
 </body>
 
